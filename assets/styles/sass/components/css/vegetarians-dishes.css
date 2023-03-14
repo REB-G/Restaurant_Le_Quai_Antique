@@ -1,0 +1,49 @@
+.vegetarians-dishes__title {
+  font-family: "garamond", serif;
+  font-size: 2.3rem;
+}
+
+.vegetarians-list__description--title {
+  font-family: "garamond", serif;
+  font-size: 1.7rem;
+}
+
+.vegetarians-list__description--details, .vegetarians-list__price {
+  font-family: "franckruehl", serif;
+  font-size: 1.3rem;
+}
+
+.vegetarians-dishes {
+  text-align: center;
+  margin-top: 20vw;
+  padding-right: 5vw;
+}
+.vegetarians-dishes__title {
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+}
+.vegetarians-dishes__list {
+  margin-top: 5vw;
+}
+
+.vegetarians-list {
+  margin-top: 17vw;
+}
+@media screen and (min-width: 884px) {
+  .vegetarians-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.vegetarians-list__image {
+  width: 30vw;
+}
+.vegetarians-list__description {
+  margin-top: 5vw;
+  padding: 5vw;
+}
+.vegetarians-list__price {
+  color: #8D3B09;
+}/*# sourceMappingURL=vegetarians-dishes.css.map */

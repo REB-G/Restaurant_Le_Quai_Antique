@@ -18,12 +18,12 @@ ul {
   font-size: 3rem;
 }
 
-.starters-dishes__title, .main-courses-dishes__title, .burgers-dishes__title, .vegetarians-dishes__title, .desserts-dishes__title, .lunch-menu__description--title {
+.vegetarians-dishes__title, .starters-dishes__title, .main-courses-dishes__title, .desserts-dishes__title, .burgers-dishes__title, .all-menus__description--title {
   font-family: "garamond", serif;
   font-size: 2.3rem;
 }
 
-.bruschetta__description--title, .berthoud__description--title, .double-cheddar-burger__description--title, .rice-vegetables__description--title, .gourmet-coffee__description--title, .lunch-menu__starters--title, .lunch-menu__main-courses--title, .lunch-menu__desserts--title, .menu__category {
+.vegetarians-list__description--title, .starters-list__description--title, .main-courses-list__description--title, .desserts-list__description--title, .burgers-list__description--title, .all-menus__category {
   font-family: "garamond", serif;
   font-size: 1.7rem;
 }
@@ -38,12 +38,12 @@ ul {
   font-size: 2rem;
 }
 
-.lunch-menu__description--text, .lunch-menu__description--price {
+.all-menus__description--text, .all-menus__description--price {
   font-family: "franckruehl", serif;
   font-size: 1.7rem;
 }
 
-.register-form__field--label, .register-form__field--input, .register-form__button, .login-form__email--label, .login-form__email--input, .login-form__password--label, .login-form__password--input, .login-form__button, .resa-form__field--label, .resa-form__field--input, .resa-form__button, .bruschetta__description--details, .bruschetta__price, .berthoud__description--details, .berthoud__price, .double-cheddar-burger__description--details, .double-cheddar-burger__price, .rice-vegetables__description--details, .rice-vegetables__price, .gourmet-coffee__description--details, .gourmet-coffee__price, .lunch-menu__starters--list, .lunch-menu__main-courses--list, .lunch-menu__desserts--list, .lunch-list__starters, .lunch-list__main-courses, .lunch-list__desserts, .menu__dish, .menu__modification--modifier, .menu__modification--delete, .menu__btn, .lunch-menu__information, .header__link {
+.register-form__field--label, .register-form__field--input, .register-form__button, .login-form__email--label, .login-form__email--input, .login-form__password--label, .login-form__password--input, .login-form__button, .resa-form__field--label, .resa-form__field--input, .resa-form__button, .vegetarians-list__description--details, .vegetarians-list__price, .starters-list__description--details, .starters-list__price, .main-courses-list__description--details, .main-courses-list__price, .desserts-list__description--details, .desserts-list__price, .burgers-list__description--details, .burgers-list__price, .all-menus__button, .all-menus__dish, .all-menus__modification--modifier, .all-menus__modification--delete, .lunch-menu__information, .header__link {
   font-family: "franckruehl", serif;
   font-size: 1.3rem;
 }
@@ -224,81 +224,42 @@ body {
   text-decoration-color: #8D3B09;
 }
 
-.lunch-menu {
+.all-menus {
   text-align: center;
 }
-.lunch-menu__description {
+.all-menus__button {
+  background-color: #8D3B09;
+  color: #D6BE74;
+}
+.all-menus__button:hover {
+  background-color: #D6BE74;
+  color: #000000;
+}
+.all-menus__description {
   margin-top: 10vw;
 }
-.lunch-menu__description--title {
+.all-menus__description--title {
   margin-top: 4vw;
   text-align: center;
   text-decoration: underline;
   text-underline-offset: 0.5vw;
 }
-.lunch-menu__description--text {
+.all-menus__description--text {
   margin-top: 2.5vw;
   text-align: center;
 }
-.lunch-menu__description--price {
+.all-menus__description--price {
   text-align: center;
   margin-top: 1.5vw;
   color: #8D3B09;
 }
-.lunch-menu__starters {
+.all-menus__category {
   margin-top: 3.5vw;
 }
-.lunch-menu__starters--title {
-  margin-top: 1.3vw;
-  text-align: center;
-}
-.lunch-menu__starters--list {
-  margin-top: 1.3vw;
-  text-align: center;
-}
-.lunch-menu__main-courses {
-  margin-top: 3.5vw;
-  text-align: center;
-}
-.lunch-menu__main-courses--title {
-  margin-top: 1.3vw;
-  text-align: center;
-}
-.lunch-menu__main-courses--list {
-  margin-top: 1.3vw;
-  text-align: center;
-}
-.lunch-menu__desserts {
-  margin-top: 3.5vw;
-}
-.lunch-menu__desserts--title {
-  margin-top: 1.3vw;
-  text-align: center;
-}
-.lunch-menu__desserts--list {
-  margin-top: 1.3vw;
-  text-align: center;
-}
-
-.lunch-list__starters {
-  text-align: center;
-}
-
-.lunch-list__main-courses {
-  text-align: center;
-}
-
-.lunch-list__desserts {
-  text-align: center;
-}
-
-.menu__category {
-  margin-top: 3.5vw;
-}
-.menu__modification {
+.all-menus__modification {
   margin-top: 5vw;
 }
-.menu__modification--modifier {
+.all-menus__modification--modifier {
   margin-top: 1.5vw;
   text-align: center;
   margin-right: 0.5vw;
@@ -307,11 +268,11 @@ body {
   text-underline-offset: 0.5vw;
   text-decoration-color: #D6BE74;
 }
-.menu__modification--modifier:hover {
+.all-menus__modification--modifier:hover {
   color: #D6BE74;
   text-decoration-color: #8D3B09;
 }
-.menu__modification--delete {
+.all-menus__modification--delete {
   margin-top: 1.5vw;
   text-align: center;
   margin-left: 0.5vw;
@@ -320,18 +281,110 @@ body {
   text-underline-offset: 0.5vw;
   text-decoration-color: #D6BE74;
 }
-.menu__modification--delete:hover {
+.all-menus__modification--delete:hover {
   color: #D6BE74;
   text-decoration-color: #8D3B09;
 }
 
-.menu__btn {
-  background-color: #8D3B09;
-  color: #D6BE74;
+.burgers-dishes {
+  text-align: center;
+  margin-top: 25vw;
+  padding-right: 5vw;
 }
-.menu__btn:hover {
-  background-color: #D6BE74;
-  color: #000000;
+.burgers-dishes__title {
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+}
+.burgers-dishes__list {
+  margin-top: 5vw;
+}
+
+.burgers-list {
+  margin-top: 17vw;
+}
+@media screen and (min-width: 884px) {
+  .burgers-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.burgers-list__image {
+  width: 30vw;
+}
+.burgers-list__description {
+  margin-top: 5vw;
+  padding: 5vw;
+}
+.burgers-list__price {
+  color: #8D3B09;
+}
+
+.desserts-dishes {
+  text-align: center;
+  margin-top: 25vw;
+  padding-right: 5vw;
+}
+.desserts-dishes__title {
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+}
+.desserts-dishes__list {
+  margin-top: 10vw;
+}
+
+.desserts-list {
+  margin-top: 17vw;
+}
+@media screen and (min-width: 884px) {
+  .desserts-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.desserts-list__image {
+  width: 30vw;
+}
+.desserts-list__description {
+  margin-top: 5vw;
+  padding: 5vw;
+}
+.desserts-list__price {
+  color: #8D3B09;
+}
+
+.main-courses-dishes {
+  text-align: center;
+  margin-top: 25vw;
+  padding-right: 5vw;
+}
+.main-courses-dishes__list {
+  margin-top: 5vw;
+}
+
+.main-courses-list {
+  margin-top: 17vw;
+}
+@media screen and (min-width: 884px) {
+  .main-courses-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.main-courses-list__image {
+  width: 30vw;
+}
+.main-courses-list__description {
+  margin-top: 5vw;
+  padding: 5vw;
+}
+.main-courses-list__price {
+  color: #8D3B09;
 }
 
 .main-dishes {
@@ -354,91 +407,25 @@ body {
   margin-top: 5vw;
 }
 
-.bruschetta {
+.starters-list {
   margin-top: 17vw;
 }
 @media screen and (min-width: 884px) {
-  .bruschetta {
+  .starters-list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 }
-.bruschetta__image {
+.starters-list__image {
   width: 30vw;
 }
-.bruschetta__description {
+.starters-list__description {
   margin-top: 5vw;
   padding: 5vw;
 }
-.bruschetta__price {
-  color: #8D3B09;
-}
-
-.main-courses-dishes {
-  text-align: center;
-  margin-top: 25vw;
-  padding-right: 5vw;
-}
-.main-courses-dishes__list {
-  margin-top: 5vw;
-}
-
-.berthoud {
-  margin-top: 17vw;
-}
-@media screen and (min-width: 884px) {
-  .berthoud {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-.berthoud__image {
-  width: 30vw;
-}
-.berthoud__description {
-  margin-top: 5vw;
-  padding: 5vw;
-}
-.berthoud__price {
-  color: #8D3B09;
-}
-
-.burgers-dishes {
-  text-align: center;
-  margin-top: 25vw;
-  padding-right: 5vw;
-}
-.burgers-dishes__title {
-  text-decoration: underline;
-  text-underline-offset: 0.5vw;
-}
-.burgers-dishes__list {
-  margin-top: 5vw;
-}
-
-.double-cheddar-burger {
-  margin-top: 17vw;
-}
-@media screen and (min-width: 884px) {
-  .double-cheddar-burger {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-.double-cheddar-burger__image {
-  width: 30vw;
-}
-.double-cheddar-burger__description {
-  margin-top: 5vw;
-  padding: 5vw;
-}
-.double-cheddar-burger__price {
+.starters-list__price {
   color: #8D3B09;
 }
 
@@ -455,60 +442,25 @@ body {
   margin-top: 5vw;
 }
 
-.rice-vegetables {
+.vegetarians-list {
   margin-top: 17vw;
 }
 @media screen and (min-width: 884px) {
-  .rice-vegetables {
+  .vegetarians-list {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 }
-.rice-vegetables__image {
+.vegetarians-list__image {
   width: 30vw;
 }
-.rice-vegetables__description {
+.vegetarians-list__description {
   margin-top: 5vw;
   padding: 5vw;
 }
-.rice-vegetables__price {
-  color: #8D3B09;
-}
-
-.desserts-dishes {
-  text-align: center;
-  margin-top: 25vw;
-  padding-right: 5vw;
-}
-.desserts-dishes__title {
-  text-decoration: underline;
-  text-underline-offset: 0.5vw;
-}
-.desserts-dishes__list {
-  margin-top: 10vw;
-}
-
-.gourmet-coffee {
-  margin-top: 17vw;
-}
-@media screen and (min-width: 884px) {
-  .gourmet-coffee {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-.gourmet-coffee__image {
-  width: 30vw;
-}
-.gourmet-coffee__description {
-  margin-top: 5vw;
-  padding: 5vw;
-}
-.gourmet-coffee__price {
+.vegetarians-list__price {
   color: #8D3B09;
 }
 

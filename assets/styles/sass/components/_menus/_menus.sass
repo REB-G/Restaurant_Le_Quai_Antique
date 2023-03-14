@@ -20,8 +20,16 @@
                 color: utils.$brown
                 text-decoration-color: utils.$brown
 
-.lunch-menu
+.all-menus
     text-align: center
+
+    &__button
+        @extend %paragraphe-s
+        background-color: utils.$brown
+        color: utils.$gold
+        &:hover
+            background-color: utils.$gold
+            color: utils.$black
 
     &__description
         margin-top: 10vw
@@ -43,61 +51,7 @@
             margin-top: 1.5vw
             color: utils.$brown
             @extend %paragraphe-m
-
-    &__starters
-        margin-top: 3.5vw
-
-        &--title
-            margin-top: 1.3vw
-            @extend %title-3
-            text-align: center
-
-        &--list
-            margin-top: 1.3vw
-            @extend %paragraphe-s
-            text-align: center
-
-    &__main-courses
-        margin-top: 3.5vw
-        text-align: center
-
-        &--title
-            margin-top: 1.3vw
-            @extend %title-3
-            text-align: center
-
-        &--list
-            margin-top: 1.3vw
-            @extend %paragraphe-s
-            text-align: center
-
-    &__desserts
-        margin-top: 3.5vw
-
-        &--title
-            margin-top: 1.3vw
-            @extend %title-3
-            text-align: center
-
-        &--list
-            margin-top: 1.3vw
-            @extend %paragraphe-s
-            text-align: center
-
-.lunch-list__starters
-    @extend %paragraphe-s
-    text-align: center
-
-.lunch-list__main-courses
-    @extend %paragraphe-s
-    text-align: center
-
-.lunch-list__desserts
-    @extend %paragraphe-s
-    text-align: center
-
-
-.menu
+            
     &__category
         @extend %title-3
         margin-top: 3.5vw
@@ -133,14 +87,6 @@
             &:hover
                 color: utils.$gold
                 text-decoration-color: utils.$brown
-
-.menu__btn
-    @extend %paragraphe-s
-    background-color: utils.$brown
-    color: utils.$gold
-    &:hover
-        background-color: utils.$gold
-        color: utils.$black
 
 .lunch-menu__information
     @extend %paragraphe-s

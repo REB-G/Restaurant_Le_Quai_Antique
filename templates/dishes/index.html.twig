@@ -16,13 +16,13 @@
     {% endif %}
     {% for dish in dishes | filter(dish => dish.category == "Entrée")%}
     <ul class="starters-dishes__list">
-        <li class="bruschetta">
-            <img class="bruschetta__image" src="{{ vich_uploader_asset(dish, 'imageFile') }}" alt={{dish.name}}>
-            <div class="bruschetta__description">
-                <p class="bruschetta__description--title">{{dish.name}}</p>
-                <p class="bruschetta__description--details">{{dish.description}}</p>
+        <li class="starters-list">
+            <img class="starters-list__image" src="{{ vich_uploader_asset(dish, 'imageFile') }}" alt={{dish.name}}>
+            <div class="starters-list__description">
+                <p class="starters-list__description--title">{{dish.name}}</p>
+                <p class="starters-list__description--details">{{dish.description}}</p>
             </div>
-            <p class="bruschetta__price">{{dish.price}}</p>
+            <p class="starters-list__price">{{dish.price}}</p>
             {% if is_granted('ROLE_ADMIN') %}
                 <a href="{{ path('app_dishes_edit', {'id': dish.id}) }}">Modifier</a>
                 <a href="{{ path('app_dishes_delete', {'id': dish.id}) }}">Supprimer</a>
@@ -39,13 +39,13 @@
     {% endif %}
     {% for dish in dishes | filter(dish => dish.category == "Plat")%}
     <ul class="main-courses-dishes__list">
-        <li class="berthoud">
-            <img class="berthoud__image" src="{{ vich_uploader_asset(dish, 'imageFile') }}" alt={{dish.name}}>
-            <div class="berthoud__description">
-                <p class="berthoud__description--title">{{dish.name}}</p>
-                <p class="berthoud__description--details">{{dish.description}}</p>
+        <li class="main-courses-list">
+            <img class="main-courses-list__image" src="{{ vich_uploader_asset(dish, 'imageFile') }}" alt={{dish.name}}>
+            <div class="main-courses-list__description">
+                <p class="main-courses-list__description--title">{{dish.name}}</p>
+                <p class="main-courses-list__description--details">{{dish.description}}</p>
             </div>
-            <p class="berthoud__price">{{dish.price}}</p>
+            <p class="main-courses-list__price">{{dish.price}}</p>
             {% if is_granted('ROLE_ADMIN') %}
                 <a href="{{ path('app_dishes_edit', {'id': dish.id}) }}">Modifier</a>
                 <a href="{{ path('app_home')}}">Supprimer</a>
@@ -62,13 +62,13 @@
     {% endif %}
     {% for dish in dishes | filter(dish => dish.category == "Burger")%}
     <ul class="burgers-dishes__list">
-        <li class="double-cheddar-burger">
-            <img class="double-cheddar-burger__image" src="{{ vich_uploader_asset(dish, 'imageFile') }}" alt={{dish.name}}>
-            <div class="double-cheddar-burger__description">
-                <p class="double-cheddar-burger__description--title">{{dish.name}}</p>
-                <p class="double-cheddar-burger__description--details">{{dish.description}}</p>
+        <li class="burgers-list">
+            <img class="burgers-list__image" src="{{ vich_uploader_asset(dish, 'imageFile') }}" alt={{dish.name}}>
+            <div class="burgers-list__description">
+                <p class="burgers-list__description--title">{{dish.name}}</p>
+                <p class="burgers-list__description--details">{{dish.description}}</p>
             </div>
-            <p class="double-cheddar-burger__price">{{dish.price}}</p>
+            <p class="burgers-list__price">{{dish.price}}</p>
             {% if is_granted('ROLE_ADMIN') %}
                 <a href="{{ path('app_dishes_edit', {'id': dish.id}) }}">Modifier</a>
                 <a href="{{ path('app_home')}}">Supprimer</a>
@@ -85,13 +85,13 @@
     {% endif %}
     {% for dish in dishes | filter(dish => dish.category == "Végétarien")%}
     <ul class="vegetarians-dishes__list">
-        <li class="rice-vegetables">
-            <img class="rice-vegetables__image" src="{{ vich_uploader_asset(dish, 'imageFile') }}" alt={{dish.name}}>
-            <div class="rice-vegetables__description">
-                <p class="rice-vegetables__description--title">{{dish.name}}</p>
-                <p class="rice-vegetables__description--details">{{dish.description}}</p>
+        <li class="vegetarians-list">
+            <img class="vegetarians-list__image" src="{{ vich_uploader_asset(dish, 'imageFile') }}" alt={{dish.name}}>
+            <div class="vegetarians-list__description">
+                <p class="vegetarians-list__description--title">{{dish.name}}</p>
+                <p class="vegetarians-list__description--details">{{dish.description}}</p>
             </div>
-            <p class="rice-vegetables__price">{{dish.price}}</p>
+            <p class="vegetarians-list__price">{{dish.price}}</p>
             {% if is_granted('ROLE_ADMIN') %}
                 <a href="{{ path('app_dishes_edit', {'id': dish.id}) }}">Modifier</a>
                 <a href="{{ path('app_home')}}">Supprimer</a>
@@ -108,13 +108,13 @@
     {% endif %}
     {% for dish in dishes | filter(dish => dish.category == "Dessert")%}
     <ul class="desserts-dishes__list">
-        <li class="gourmet-coffee">
-            <img class="gourmet-coffee__image" src="{{ vich_uploader_asset(dish, 'imageFile') }}" alt={{dish.name}}>
-            <div class="gourmet-coffee__descritpion">
-                <p class="gourmet-coffee__description--title">{{dish.name}}</p>
-                <p class="gourmet-coffee__description--details">{{dish.description}}</p>
+        <li class="desserts-list">
+            <img class="desserts-list__image" src="{{ vich_uploader_asset(dish, 'imageFile') }}" alt={{dish.name}}>
+            <div class="desserts-list__descritpion">
+                <p class="desserts-list__description--title">{{dish.name}}</p>
+                <p class="desserts-list__description--details">{{dish.description}}</p>
             </div>
-            <p class="gourmet-coffee__price">{{dish.price}}</p>
+            <p class="desserts-list__price">{{dish.price}}</p>
             {% if is_granted('ROLE_ADMIN') %}
                 <a href="{{ path('app_dishes_edit', {'id': dish.id}) }}">Modifier</a>
                 <a href="{{ path('app_home')}}">Supprimer</a>
