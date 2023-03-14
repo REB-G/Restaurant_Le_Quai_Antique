@@ -1,0 +1,53 @@
+@use "../../../sass/utils/_main" as utils
+
+.login-form
+    display: flex
+    align-items: center
+    justify-content: space-around
+    flex-direction: column
+    height: 40%
+    margin-top: 3vw
+
+    &__title
+        @extend %title-1
+        text-align: center
+        margin-top: 3vw
+
+    &__email
+        align-items: baseline
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        align-content: stretch
+        justify-content: space-between
+        width: 35%
+
+        &--label
+            @extend %paragraphe-s
+
+        &--input
+            @extend %paragraphe-s
+
+    &__password
+        align-items: baseline
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        align-content: stretch
+        justify-content: space-between
+        width: 35%
+
+        &--label
+            @extend %paragraphe-s
+
+        &--input
+            @extend %paragraphe-s
+
+    &__button
+        background-color: utils.$brown
+        color: utils.$gold
+        @extend %paragraphe-s
+        text-align: center
+        &:hover
+            background-color: utils.$gold
+            color: utils.$black

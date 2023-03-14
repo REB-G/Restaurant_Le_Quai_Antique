@@ -1,0 +1,664 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.register-form__title, .login-form__title, .resa-form__title, .main-dishes__title, .main-menus__title {
+  font-family: "garamond", serif;
+  font-size: 3rem;
+}
+
+.starters-dishes__title, .main-courses-dishes__title, .burgers-dishes__title, .vegetarians-dishes__title, .desserts-dishes__title, .lunch-menu__description--title {
+  font-family: "garamond", serif;
+  font-size: 2.3rem;
+}
+
+.bruschetta__description--title, .berthoud__description--title, .double-cheddar-burger__description--title, .rice-vegetables__description--title, .gourmet-coffee__description--title, .lunch-menu__starters--title, .lunch-menu__main-courses--title, .lunch-menu__desserts--title, .menu__category {
+  font-family: "garamond", serif;
+  font-size: 1.7rem;
+}
+
+.footer__contact--title, .footer__legals--title {
+  font-family: "garamond", serif;
+  font-size: 1.3rem;
+}
+
+.main-dishes__description, .main-menus__description {
+  font-family: "franckruehl", serif;
+  font-size: 2rem;
+}
+
+.lunch-menu__description--text, .lunch-menu__description--price {
+  font-family: "franckruehl", serif;
+  font-size: 1.7rem;
+}
+
+.register-form__field--label, .register-form__field--input, .register-form__button, .login-form__email--label, .login-form__email--input, .login-form__password--label, .login-form__password--input, .login-form__button, .resa-form__field--label, .resa-form__field--input, .resa-form__button, .bruschetta__description--details, .bruschetta__price, .berthoud__description--details, .berthoud__price, .double-cheddar-burger__description--details, .double-cheddar-burger__price, .rice-vegetables__description--details, .rice-vegetables__price, .gourmet-coffee__description--details, .gourmet-coffee__price, .lunch-menu__starters--list, .lunch-menu__main-courses--list, .lunch-menu__desserts--list, .lunch-list__starters, .lunch-list__main-courses, .lunch-list__desserts, .menu__dish, .menu__modification--modifier, .menu__modification--delete, .menu__btn, .lunch-menu__information, .header__link {
+  font-family: "franckruehl", serif;
+  font-size: 1.3rem;
+}
+
+.footer__contact--links, .footer__legals--links, .footer__copyright {
+  font-family: "franckruehl", serif;
+  font-size: 0.75rem;
+}
+
+.flux {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background-color: #000000;
+  color: #D6BE74;
+}
+
+.header {
+  background-color: #000000;
+}
+
+.header__container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+}
+@media screen and (min-width: 884px) {
+  .header__container {
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header__container--logo {
+  width: 20vw;
+}
+
+.header__container--nav {
+  display: none;
+}
+@media screen and (min-width: 884px) {
+  .header__container--nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    flex: 1;
+    height: 100%;
+    margin: auto;
+    transition: height, margin 0.3s eases;
+  }
+}
+.header__link {
+  margin: 0.8rem;
+  color: #D6BE74;
+  text-align: center;
+  transition: color 0.5s ease;
+}
+@media screen and (min-width: 884px) {
+  .header__link {
+    margin: 0.07rem;
+  }
+}
+
+.nav-active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  transition: all 400ms;
+}
+
+.header__container--btn {
+  width: 2.3rem;
+  margin-right: 8vw;
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 884px) {
+  .header__container--btn {
+    display: none;
+  }
+}
+.header__container--btn i {
+  display: block;
+  color: #6C643C;
+  font-size: 1.5rem;
+}
+
+.btn {
+  border-radius: 1.5rem;
+  font-weight: 500;
+  transition: 0.5s ease-in;
+  margin: 0.7vw;
+}
+.btn__primary {
+  background-color: #D6BE74;
+  color: #000000;
+}
+.btn__primary:hover {
+  background-color: #8D3B09;
+  color: #D6BE74;
+}
+
+.footer {
+  color: #6C643C;
+  border-top: solid;
+  border-color: #6C643C;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 10vw;
+}
+.footer__logo {
+  width: 20vw;
+}
+@media screen and (min-width: 768px) {
+  .footer__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+.footer__contact {
+  margin-top: 2vw;
+}
+.footer__contact--title {
+  text-decoration: underline;
+}
+.footer__contact--links:hover {
+  color: #8D3B09;
+}
+.footer__legals {
+  margin-top: 2vw;
+}
+.footer__legals--title {
+  text-decoration: underline;
+}
+.footer__legals--links:hover {
+  color: #8D3B09;
+}
+.footer__copyright {
+  margin-top: 2vw;
+}
+
+.main-menus {
+  text-align: center;
+  margin-top: 3vw;
+}
+.main-menus__title {
+  text-align: center;
+  margin-bottom: 5vw;
+}
+.main-menus__description {
+  text-align: center;
+}
+.main-menus__description--link {
+  text-decoration: underline;
+  text-decoration-color: #6C643C;
+}
+.main-menus__description--link:hover {
+  color: #8D3B09;
+  text-decoration-color: #8D3B09;
+}
+
+.lunch-menu {
+  text-align: center;
+}
+.lunch-menu__description {
+  margin-top: 10vw;
+}
+.lunch-menu__description--title {
+  margin-top: 4vw;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+}
+.lunch-menu__description--text {
+  margin-top: 2.5vw;
+  text-align: center;
+}
+.lunch-menu__description--price {
+  text-align: center;
+  margin-top: 1.5vw;
+  color: #8D3B09;
+}
+.lunch-menu__starters {
+  margin-top: 3.5vw;
+}
+.lunch-menu__starters--title {
+  margin-top: 1.3vw;
+  text-align: center;
+}
+.lunch-menu__starters--list {
+  margin-top: 1.3vw;
+  text-align: center;
+}
+.lunch-menu__main-courses {
+  margin-top: 3.5vw;
+  text-align: center;
+}
+.lunch-menu__main-courses--title {
+  margin-top: 1.3vw;
+  text-align: center;
+}
+.lunch-menu__main-courses--list {
+  margin-top: 1.3vw;
+  text-align: center;
+}
+.lunch-menu__desserts {
+  margin-top: 3.5vw;
+}
+.lunch-menu__desserts--title {
+  margin-top: 1.3vw;
+  text-align: center;
+}
+.lunch-menu__desserts--list {
+  margin-top: 1.3vw;
+  text-align: center;
+}
+
+.lunch-list__starters {
+  text-align: center;
+}
+
+.lunch-list__main-courses {
+  text-align: center;
+}
+
+.lunch-list__desserts {
+  text-align: center;
+}
+
+.menu__category {
+  margin-top: 3.5vw;
+}
+.menu__modification {
+  margin-top: 5vw;
+}
+.menu__modification--modifier {
+  margin-top: 1.5vw;
+  text-align: center;
+  margin-right: 0.5vw;
+  color: #8D3B09;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+  text-decoration-color: #D6BE74;
+}
+.menu__modification--modifier:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
+}
+.menu__modification--delete {
+  margin-top: 1.5vw;
+  text-align: center;
+  margin-left: 0.5vw;
+  color: #8D3B09;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+  text-decoration-color: #D6BE74;
+}
+.menu__modification--delete:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
+}
+
+.menu__btn {
+  background-color: #8D3B09;
+  color: #D6BE74;
+}
+.menu__btn:hover {
+  background-color: #D6BE74;
+  color: #000000;
+}
+
+.main-dishes {
+  text-align: center;
+  margin-top: 10vw;
+}
+.main-dishes__title {
+  margin-bottom: 5vw;
+}
+.starters-dishes {
+  text-align: center;
+  margin-top: 25vw;
+  padding-right: 5vw;
+}
+.starters-dishes__title {
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+}
+.starters-dishes__list {
+  margin-top: 5vw;
+}
+
+.bruschetta {
+  margin-top: 17vw;
+}
+@media screen and (min-width: 884px) {
+  .bruschetta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.bruschetta__image {
+  width: 30vw;
+}
+.bruschetta__description {
+  margin-top: 5vw;
+  padding: 5vw;
+}
+.bruschetta__price {
+  color: #8D3B09;
+}
+
+.main-courses-dishes {
+  text-align: center;
+  margin-top: 25vw;
+  padding-right: 5vw;
+}
+.main-courses-dishes__list {
+  margin-top: 5vw;
+}
+
+.berthoud {
+  margin-top: 17vw;
+}
+@media screen and (min-width: 884px) {
+  .berthoud {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.berthoud__image {
+  width: 30vw;
+}
+.berthoud__description {
+  margin-top: 5vw;
+  padding: 5vw;
+}
+.berthoud__price {
+  color: #8D3B09;
+}
+
+.burgers-dishes {
+  text-align: center;
+  margin-top: 25vw;
+  padding-right: 5vw;
+}
+.burgers-dishes__title {
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+}
+.burgers-dishes__list {
+  margin-top: 5vw;
+}
+
+.double-cheddar-burger {
+  margin-top: 17vw;
+}
+@media screen and (min-width: 884px) {
+  .double-cheddar-burger {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.double-cheddar-burger__image {
+  width: 30vw;
+}
+.double-cheddar-burger__description {
+  margin-top: 5vw;
+  padding: 5vw;
+}
+.double-cheddar-burger__price {
+  color: #8D3B09;
+}
+
+.vegetarians-dishes {
+  text-align: center;
+  margin-top: 20vw;
+  padding-right: 5vw;
+}
+.vegetarians-dishes__title {
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+}
+.vegetarians-dishes__list {
+  margin-top: 5vw;
+}
+
+.rice-vegetables {
+  margin-top: 17vw;
+}
+@media screen and (min-width: 884px) {
+  .rice-vegetables {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.rice-vegetables__image {
+  width: 30vw;
+}
+.rice-vegetables__description {
+  margin-top: 5vw;
+  padding: 5vw;
+}
+.rice-vegetables__price {
+  color: #8D3B09;
+}
+
+.desserts-dishes {
+  text-align: center;
+  margin-top: 25vw;
+  padding-right: 5vw;
+}
+.desserts-dishes__title {
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+}
+.desserts-dishes__list {
+  margin-top: 10vw;
+}
+
+.gourmet-coffee {
+  margin-top: 17vw;
+}
+@media screen and (min-width: 884px) {
+  .gourmet-coffee {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.gourmet-coffee__image {
+  width: 30vw;
+}
+.gourmet-coffee__description {
+  margin-top: 5vw;
+  padding: 5vw;
+}
+.gourmet-coffee__price {
+  color: #8D3B09;
+}
+
+.resa-form__title {
+  text-align: center;
+  margin-top: 5vw;
+}
+.resa-form__flux {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 110vw;
+  margin-top: 5vw;
+}
+.resa-form__form {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+}
+.resa-form__field {
+  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-between;
+}
+.resa-form__field--input {
+  margin-left: 5vw;
+}
+.resa-form__button {
+  background-color: #8D3B09;
+  color: #D6BE74;
+  text-align: center;
+  margin-top: 5vw;
+}
+.resa-form__button:hover {
+  background-color: #D6BE74;
+  color: #000000;
+}
+
+#reservation_form_allergy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 40%;
+  margin-top: 3vw;
+}
+.login-form__title {
+  text-align: center;
+  margin-top: 3vw;
+}
+.login-form__email {
+  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-between;
+  width: 35%;
+}
+.login-form__password {
+  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-between;
+  width: 35%;
+}
+.login-form__button {
+  background-color: #8D3B09;
+  color: #D6BE74;
+  text-align: center;
+}
+.login-form__button:hover {
+  background-color: #D6BE74;
+  color: #000000;
+}
+
+.register-form__title {
+  text-align: center;
+  margin-top: 5vw;
+}
+.register-form__flux {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 5vw;
+}
+.register-form__form {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+}
+.register-form__field {
+  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-between;
+}
+.register-form__field--input {
+  margin-left: 5vw;
+}
+.register-form__button {
+  background-color: #8D3B09;
+  color: #D6BE74;
+  text-align: center;
+  margin-top: 5vw;
+}
+.register-form__button:hover {
+  background-color: #D6BE74;
+  color: #000000;
+}
+
+#registration_form_allergy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  border-radius: 1.5rem;
+  font-weight: 500;
+  transition: 0.5s ease-in;
+  margin: 0.7vw;
+}
+.btn__primary {
+  background-color: #D6BE74;
+  color: #000000;
+}
+.btn__primary:hover {
+  background-color: #8D3B09;
+  color: #D6BE74;
+}/*# sourceMappingURL=style.css.map */
