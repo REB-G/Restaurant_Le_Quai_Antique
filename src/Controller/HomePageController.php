@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/home/page')]
+// #[Route('/home/page')]
 class HomePageController extends AbstractController
 {
     #[Route('/', name: 'app_home_page_index', methods: ['GET'])]
@@ -42,13 +42,13 @@ class HomePageController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_home_page_show', methods: ['GET'])]
-    public function show(HomePage $homePage): Response
-    {
-        return $this->render('home_page/show.html.twig', [
-            'home_page' => $homePage,
-        ]);
-    }
+    // #[Route('/{id}', name: 'app_home_page_show', methods: ['GET'])]
+    // public function show(HomePage $homePage): Response
+    // {
+    //     return $this->render('home_page/show.html.twig', [
+    //         'home_page' => $homePage,
+    //     ]);
+    // }
 
     #[Route('/{id}/edit', name: 'app_home_page_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, HomePage $homePage, HomePageRepository $homePageRepository): Response

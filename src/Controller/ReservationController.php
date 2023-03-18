@@ -56,7 +56,7 @@ class ReservationController extends AbstractController //Faire un ou deux contro
             //dd($reservation);
         }
     
-        return $this->render('reservation/reservation.html.twig', [
+        return $this->render('reservation/index.html.twig', [
             'controller_name' => 'ReservationController',
             'reservationForm' => $form->createView(),
         ]);

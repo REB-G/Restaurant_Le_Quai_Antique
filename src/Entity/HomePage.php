@@ -12,7 +12,7 @@ use Doctrine\DBAL\Types\Types;
 #[ORM\Entity(repositoryClass: HomePageRepository::class)]
 class HomePage
 {
-#[ORM\Id]
+    #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;

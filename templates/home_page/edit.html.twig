@@ -5,9 +5,9 @@
 {% block body %}
     <h1>Modification de la page d'accueil</h1>
 
-    {{ include('pincipal_page/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('home_page/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('app_pincipal_page_index') }}">Retourner à la page d'accueil</a>
+    <a href="{{ path('app_home_page_index') }}">Retourner à la page d'accueil</a>
 
-    {{ include('pincipal_page/_delete_form.html.twig') }}
+    {{ include('home_page/_delete_form.html.twig') }}
 {% endblock %}
