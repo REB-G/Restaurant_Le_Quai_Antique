@@ -12,39 +12,39 @@
 
 <section class="description flux">
     <h2 class="description__title">{{page.aboutTitle}}</h2>
-    <p class="description__text-presentation">
-        {{page.aboutText}}
-    </p>
+    <p class="description__text-presentation">{{page.aboutText}}</p>
 </section>
 
 <section class="famous-dishes flux">
     <h2 class="famous-dishes__title">{{page.sectionDishesTitle}}</h2>
     <p class="famous-dishes__text-presentation">{{page.sectionDishesText}}</p>
     {% if is_granted('ROLE_ADMIN') %}
-        <a href="{{ path('app_pincipal_page_edit', {'id': page.id}) }}">Modifier</a>
-        <a href="{{ path('app_pincipal_page_delete', {'id': page.id}) }}">Supprimer</a>
+    <div class='main-modification'>
+        <a href="{{ path('app_home_page_edit', {'id': page.id}) }}" class='main-modification__modifier'>Modifier les informations de présentation</a>
+        <a href="{{ path('app_home_page_delete', {'id': page.id}) }}" class='main-modification__delete'>Supprimer les informations de présentation</a>
+    </div>
     {% endif %}
     {% endfor %}
     {% for dish in famous_dishes %}
-    <div class="raclette-card">
-        <div class="raclette-card__view">
-            <img class="raclette-card__view--image" src="{{asset('build/images/main_courses/raclette_for_two.jpeg')}}" alt="Raclette pour deux personnes.">
+    <div class="famous-dish-card">
+        <div class="famous-dish-card__view">
+            <img class="famous-dish-card__view--image" src="{{ vich_uploader_asset(dish, 'imageFile') }}" alt="{{dish.name}}">
         </div>
-        <div class="raclette-card__description">
-            <h3 class="raclette-card__description--title">{{dish.name}}</h3>
-            <p class="raclette-card__description--text-presentation">
-                {{dish.description}}
-            </p>
+        <div class="famous-dish-card__description">
+            <h3 class="famous-dish-card__description--title">{{dish.name}}</h3>
+            <p class="famous-dish-card__description--text-presentation">{{dish.description}}</p>
         </div>
     {% if is_granted('ROLE_ADMIN') %}
-        <a href="{{ path('app_dishes_home_page_edit', {'id': dish.id}) }}">Modifier</a>
-        <a href="{{ path('app_dishes_home_page_delete', {'id': dish.id}) }}">Supprimer</a>
+    <div class='famous-dish-card__modification'>
+        <a href="{{ path('app_famous_dishes_edit', {'id': dish.id}) }}" class='famous-dish-card__modification--modifier'>Modifier</a>
+        <a href="{{ path('app_famous_dishes_delete', {'id': dish.id}) }}" class='famous-dish-card__modification--delete'>Supprimer</a>
+    </div>
     {% endif %}
     </div>
-    {% if is_granted('ROLE_ADMIN') %}
-        <a href="{{ path('app_dishes_home_page_new') }}">Ajouter un plat</a>
-    {% endif %}
     {% endfor %}
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('app_famous_dishes_new') }}" class='famous-dish-card__modification--add'>Ajouter un plat</a>
+    {% endif %}
     <a class="btn-reservation">Réserver une table</a>
 </section>
 

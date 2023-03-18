@@ -48,7 +48,7 @@
             <p class="main-courses-list__price">{{dish.price}}</p>
             {% if is_granted('ROLE_ADMIN') %}
                 <a href="{{ path('app_dishes_edit', {'id': dish.id}) }}">Modifier</a>
-                <a href="{{ path('app_home')}}">Supprimer</a>
+                <a href="{{ path('app_dishes_delete', {'id': dish.id})}}">Supprimer</a>
             {% endif %}
         </li>
     </ul>
@@ -71,7 +71,7 @@
             <p class="burgers-list__price">{{dish.price}}</p>
             {% if is_granted('ROLE_ADMIN') %}
                 <a href="{{ path('app_dishes_edit', {'id': dish.id}) }}">Modifier</a>
-                <a href="{{ path('app_home')}}">Supprimer</a>
+                <a href="{{ path('app_dishes_delete', {'id': dish.id})}}">Supprimer</a>
             {% endif %}
         </li>
     </ul>
@@ -94,7 +94,7 @@
             <p class="vegetarians-list__price">{{dish.price}}</p>
             {% if is_granted('ROLE_ADMIN') %}
                 <a href="{{ path('app_dishes_edit', {'id': dish.id}) }}">Modifier</a>
-                <a href="{{ path('app_home')}}">Supprimer</a>
+                <a href="{{ path('app_dishes_delete', {'id': dish.id})}}">Supprimer</a>
             {% endif %}
         </li>
     </ul>
@@ -117,7 +117,7 @@
             <p class="desserts-list__price">{{dish.price}}</p>
             {% if is_granted('ROLE_ADMIN') %}
                 <a href="{{ path('app_dishes_edit', {'id': dish.id}) }}">Modifier</a>
-                <a href="{{ path('app_home')}}">Supprimer</a>
+                <a href="{{ path('app_dishes_delete', {'id': dish.id})}}">Supprimer</a>
             {% endif %}
         </li>
     </ul>

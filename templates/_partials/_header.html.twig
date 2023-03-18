@@ -16,7 +16,6 @@
 					<a href="{{path('admin')}}" class="btn btn__primary header__link">Administration</a>
 				{% endif %}
 				{% if app.user %}
-					<a href="{{path('app_home_page_index')}}" class="btn btn__primary header__link">Mon compte</a>
 					<a href="{{path('app_logout')}}" class="btn btn__primary header__link">Se déconnecter</a>
 				{% else %}
 					<a href="{{path('app_register')}}" class="btn btn__primary header__link">S'inscire</a>
