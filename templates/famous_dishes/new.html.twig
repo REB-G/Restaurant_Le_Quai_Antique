@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Le Quai Antique - Ajout d'un plat à la page d'accueil{% endblock %}
+
+{% block body %}
+    <h1>Ajouter un nouveau plat à la page d'accueil</h1>
+
+    {{ include('dishes_home_page/_form.html.twig') }}
+
+    <a href="{{ path('app_pincipal_page_index') }}">Retourner à la page d'accueil</a>
+{% endblock %}

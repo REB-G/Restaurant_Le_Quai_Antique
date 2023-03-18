@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Le Quai Antique - Accueil{% endblock %}
+
+{% block body %}
+
+{% for page in home_pages %}
+<section class="main flux">
+    <h1 class="main__title">{{page.pageTitle}}</h1>
+    <p class="main__text-presentation">{{page.welcomeText}}</p>
+</section>
+
+<section class="description flux">
+    <h2 class="description__title">{{page.aboutTitle}}</h2>
+    <p class="description__text-presentation">
+        {{page.aboutText}}
+    </p>
+</section>
+
+<section class="famous-dishes flux">
+    <h2 class="famous-dishes__title">{{page.sectionDishesTitle}}</h2>
+    <p class="famous-dishes__text-presentation">{{page.sectionDishesText}}</p>
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('app_pincipal_page_edit', {'id': page.id}) }}">Modifier</a>
+        <a href="{{ path('app_pincipal_page_delete', {'id': page.id}) }}">Supprimer</a>
+    {% endif %}
+    {% endfor %}
+    {% for dish in famous_dishes %}
+    <div class="raclette-card">
+        <div class="raclette-card__view">
+            <img class="raclette-card__view--image" src="{{asset('build/images/main_courses/raclette_for_two.jpeg')}}" alt="Raclette pour deux personnes.">
+        </div>
+        <div class="raclette-card__description">
+            <h3 class="raclette-card__description--title">{{dish.name}}</h3>
+            <p class="raclette-card__description--text-presentation">
+                {{dish.description}}
+            </p>
+        </div>
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('app_dishes_home_page_edit', {'id': dish.id}) }}">Modifier</a>
+        <a href="{{ path('app_dishes_home_page_delete', {'id': dish.id}) }}">Supprimer</a>
+    {% endif %}
+    </div>
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('app_dishes_home_page_new') }}">Ajouter un plat</a>
+    {% endif %}
+    {% endfor %}
+    <a class="btn-reservation">Réserver une table</a>
+</section>
+
+{% endblock %}

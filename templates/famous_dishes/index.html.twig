@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}FamousDishes index{% endblock %}
+
+{% block body %}
+    <h1>FamousDishes index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>ImageName</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for famous_dish in famous_dishes %}
+            <tr>
+                <td>{{ famous_dish.id }}</td>
+                <td>{{ famous_dish.name }}</td>
+                <td>{{ famous_dish.description }}</td>
+                <td>{{ famous_dish.imageName }}</td>
+                <td>
+                    <a href="{{ path('app_famous_dishes_show', {'id': famous_dish.id}) }}">show</a>
+                    <a href="{{ path('app_famous_dishes_edit', {'id': famous_dish.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_famous_dishes_new') }}">Create new</a>
+{% endblock %}
