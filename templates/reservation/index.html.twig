@@ -15,8 +15,9 @@
     {{ form_row(reservationForm.reservationDate) }}
     {{ form_row(reservationForm.reservationHour) }}
     {{ form_row(reservationForm.service) }}
-    
-    <button type="submit" class="btn resa-form__button">Réserver</button>
+    <div class='flex-center resa-form__reservation'>
+        <button type="submit" class="btn resa-form__reservation--button">Réserver</button>
+    </div>
 {{ form_end(reservationForm) }}
 </section>
 

@@ -13,9 +13,6 @@
 </section>
 
 <section class="all-menus">
-    {% if is_granted('ROLE_ADMIN') %}
-        <a href="{{ path('app_menus_new') }}" class='btn all-menus__button'>Ajouter un menu</a>
-    {% endif %}
     {% for menu in menus %}
 	<div class="all-menus__description">
 		<h2 class="all-menus__description--title">{{menu.title}}</h2>
@@ -44,13 +41,21 @@
             </ul>
         {% endif %}
         {% if is_granted('ROLE_ADMIN') %}
-            <div class='all-menu__modification'>
+            <div class='all-menus__modification'>
                 <a href="{{ path('app_menus_edit', {'id': menu.id}) }}" class ='all-menus__modification--modifier'>Modifier</a>
                 <a href="{{ path('app_menus_delete', {'id': menu.id}) }}" class ='all-menus__modification--delete'>Supprimer</a>
             </div>
         {% endif %}
 	</div>
     {% endfor %}
+    {% if is_granted('ROLE_ADMIN') %}
+        <div class='all-menus__new'>
+            <a href="{{ path('app_menus_new') }}" class='all-menus__new--add'>Ajouter un menu</a>
+        </div>
+    {% endif %}
+    <div class='flex-center'>
+        <a class="btn-reservation">Réserver une table</a>
+    </div>
 </section>
 
 {% endblock %}

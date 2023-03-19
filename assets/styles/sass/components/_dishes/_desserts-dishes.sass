@@ -2,8 +2,7 @@
 
 .desserts-dishes
     text-align: center
-    margin-top: 25vw
-    padding-right: 5vw
+    margin-top: 17vw
 
     &__title
         @extend %title-2
@@ -11,22 +10,35 @@
         text-underline-offset: 0.5vw
 
     &__list
-        margin-top: 10vw
+        margin-top: 3vw
+
+    &__modification
+        margin-top: 5vw
+
+        &--add
+            margin-top: 1.5vw
+            @extend %paragraphe-s
+            text-align: center
+            color: utils.$brown
+            text-decoration: underline
+            text-underline-offset: 0.5vw
+            text-decoration-color: utils.$gold
+            &:hover
+                color: utils.$gold
+                text-decoration-color: utils.$brown
 
 .desserts-list
-    margin-top: 17vw
-    +utils.responsive(tablet)
-        display: flex
-        flex-direction: row
-        justify-content: space-between
-        align-items: center
+    margin-top: 10vw
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
 
     &__image
         width: 30vw
 
     &__description
-        margin-top: 5vw
-        padding: 5vw
+        padding: 3vw
 
         &--title
             @extend %title-3
@@ -37,3 +49,32 @@
     &__price
         @extend %paragraphe-s
         color: utils.$brown
+
+    &__modification
+        margin-top: 3vw
+
+        &--modifier
+            margin-top: 1.5vw
+            @extend %paragraphe-s
+            text-align: center
+            margin-right: 0.5vw 
+            color: utils.$brown
+            text-decoration: underline
+            text-underline-offset: 0.5vw
+            text-decoration-color: utils.$gold
+            &:hover
+                color: utils.$gold
+                text-decoration-color: utils.$brown
+
+        &--delete
+            margin-top: 1.5vw
+            @extend %paragraphe-s
+            text-align: center
+            margin-left: 0.5vw
+            color: utils.$brown
+            text-decoration: underline
+            text-underline-offset: 0.5vw
+            text-decoration-color: utils.$gold
+            &:hover
+                color: utils.$gold
+                text-decoration-color: utils.$brown

@@ -23,14 +23,6 @@
 .all-menus
     text-align: center
 
-    &__button
-        @extend %paragraphe-s
-        background-color: utils.$brown
-        color: utils.$gold
-        &:hover
-            background-color: utils.$gold
-            color: utils.$black
-
     &__description
         margin-top: 10vw
 
@@ -80,6 +72,21 @@
             @extend %paragraphe-s
             text-align: center
             margin-left: 0.5vw
+            color: utils.$brown
+            text-decoration: underline
+            text-underline-offset: 0.5vw
+            text-decoration-color: utils.$gold
+            &:hover
+                color: utils.$gold
+                text-decoration-color: utils.$brown
+
+    &__new
+        margin-top: 5vw
+        
+        &--add
+            margin-top: 1.5vw
+            @extend %paragraphe-s
+            text-align: center
             color: utils.$brown
             text-decoration: underline
             text-underline-offset: 0.5vw

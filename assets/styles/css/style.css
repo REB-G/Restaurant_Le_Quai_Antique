@@ -43,7 +43,7 @@ ul {
   font-size: 1.7rem;
 }
 
-.header__link, .all-menus__button, .all-menus__dish, .all-menus__modification--modifier, .all-menus__modification--delete, .lunch-menu__information, .btn-reservation, .main-modification__modifier, .main-modification__delete, .famous-dish-card__modification--modifier, .famous-dish-card__modification--delete, .famous-dish-card__modification--add, .register-form__field--label, .register-form__field--input, .register-form__button, .login-form__email--label, .login-form__email--input, .login-form__password--label, .login-form__password--input, .login-form__button, .resa-form__field--label, .resa-form__field--input, .resa-form__button, .vegetarians-list__description--details, .vegetarians-list__price, .starters-list__description--details, .starters-list__price, .main-courses-list__description--details, .main-courses-list__price, .desserts-list__description--details, .desserts-list__price, .burgers-list__description--details, .burgers-list__price {
+.btn-reservation, .header__link, .all-menus__dish, .all-menus__modification--modifier, .all-menus__modification--delete, .all-menus__new--add, .lunch-menu__information, .main-modification__modifier, .famous-dish-card__modification--modifier, .famous-dish-card__modification--delete, .famous-dish-card__modification--add, .register-form__field--label, .register-form__field--input, .register-form__field-checkbox--label, .register-form__field-checkbox--input, .register-form__button, .login-form__email--label, .login-form__email--input, .login-form__password--label, .login-form__password--input, .login-form__button, .resa-form__field--label, .resa-form__field--input, .resa-form__reservation--button, .vegetarians-dishes__modification--add, .vegetarians-list__description--details, .vegetarians-list__price, .vegetarians-list__modification--modifier, .vegetarians-list__modification--delete, .starters-dishes__modification--add, .starters-list__description--details, .starters-list__price, .starters-list__modification--modifier, .starters-list__modification--delete, .main-courses-dishes__modification--add, .main-courses-list__description--details, .main-courses-list__price, .main-courses-list__modification--modifier, .main-courses-list__modification--delete, .desserts-dishes__modification--add, .desserts-list__description--details, .desserts-list__price, .desserts-list__modification--modifier, .desserts-list__modification--delete, .burgers-dishes__modification--add, .burgers-list__description--details, .burgers-list__price, .burgers-list__modification--modifier, .burgers-list__modification--delete {
   font-family: "franckruehl", serif;
   font-size: 1.3rem;
 }
@@ -57,6 +57,7 @@ ul {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  max-width: 90%;
 }
 
 body {
@@ -66,103 +67,217 @@ body {
 
 .burgers-dishes {
   text-align: center;
-  margin-top: 25vw;
-  padding-right: 5vw;
+  margin-top: 17vw;
 }
 .burgers-dishes__title {
   text-decoration: underline;
   text-underline-offset: 0.5vw;
 }
 .burgers-dishes__list {
+  margin-top: 3vw;
+}
+.burgers-dishes__modification {
   margin-top: 5vw;
+}
+.burgers-dishes__modification--add {
+  margin-top: 1.5vw;
+  text-align: center;
+  color: #8D3B09;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+  text-decoration-color: #D6BE74;
+}
+.burgers-dishes__modification--add:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
 }
 
 .burgers-list {
-  margin-top: 17vw;
-}
-@media screen and (min-width: 884px) {
-  .burgers-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+  margin-top: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .burgers-list__image {
   width: 30vw;
 }
 .burgers-list__description {
-  margin-top: 5vw;
-  padding: 5vw;
+  padding: 3vw;
 }
 .burgers-list__price {
   color: #8D3B09;
 }
+.burgers-list__modification {
+  margin-top: 3vw;
+}
+.burgers-list__modification--modifier {
+  margin-top: 1.5vw;
+  text-align: center;
+  margin-right: 0.5vw;
+  color: #8D3B09;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+  text-decoration-color: #D6BE74;
+}
+.burgers-list__modification--modifier:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
+}
+.burgers-list__modification--delete {
+  margin-top: 1.5vw;
+  text-align: center;
+  margin-left: 0.5vw;
+  color: #8D3B09;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+  text-decoration-color: #D6BE74;
+}
+.burgers-list__modification--delete:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
+}
 
 .desserts-dishes {
   text-align: center;
-  margin-top: 25vw;
-  padding-right: 5vw;
+  margin-top: 17vw;
 }
 .desserts-dishes__title {
   text-decoration: underline;
   text-underline-offset: 0.5vw;
 }
 .desserts-dishes__list {
-  margin-top: 10vw;
+  margin-top: 3vw;
+}
+.desserts-dishes__modification {
+  margin-top: 5vw;
+}
+.desserts-dishes__modification--add {
+  margin-top: 1.5vw;
+  text-align: center;
+  color: #8D3B09;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+  text-decoration-color: #D6BE74;
+}
+.desserts-dishes__modification--add:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
 }
 
 .desserts-list {
-  margin-top: 17vw;
-}
-@media screen and (min-width: 884px) {
-  .desserts-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+  margin-top: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .desserts-list__image {
   width: 30vw;
 }
 .desserts-list__description {
-  margin-top: 5vw;
-  padding: 5vw;
+  padding: 3vw;
 }
 .desserts-list__price {
   color: #8D3B09;
 }
+.desserts-list__modification {
+  margin-top: 3vw;
+}
+.desserts-list__modification--modifier {
+  margin-top: 1.5vw;
+  text-align: center;
+  margin-right: 0.5vw;
+  color: #8D3B09;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+  text-decoration-color: #D6BE74;
+}
+.desserts-list__modification--modifier:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
+}
+.desserts-list__modification--delete {
+  margin-top: 1.5vw;
+  text-align: center;
+  margin-left: 0.5vw;
+  color: #8D3B09;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+  text-decoration-color: #D6BE74;
+}
+.desserts-list__modification--delete:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
+}
 
 .main-courses-dishes {
   text-align: center;
-  margin-top: 25vw;
-  padding-right: 5vw;
+  margin-top: 17vw;
 }
 .main-courses-dishes__list {
+  margin-top: 3vw;
+}
+.main-courses-dishes__modification {
   margin-top: 5vw;
+}
+.main-courses-dishes__modification--add {
+  margin-top: 1.5vw;
+  text-align: center;
+  color: #8D3B09;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+  text-decoration-color: #D6BE74;
+}
+.main-courses-dishes__modification--add:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
 }
 
 .main-courses-list {
-  margin-top: 17vw;
-}
-@media screen and (min-width: 884px) {
-  .main-courses-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+  margin-top: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .main-courses-list__image {
   width: 30vw;
 }
 .main-courses-list__description {
-  margin-top: 5vw;
-  padding: 5vw;
+  padding: 3vw;
 }
 .main-courses-list__price {
   color: #8D3B09;
+}
+.main-courses-list__modification {
+  margin-top: 3vw;
+}
+.main-courses-list__modification--modifier {
+  margin-top: 1.5vw;
+  text-align: center;
+  margin-right: 0.5vw;
+  color: #8D3B09;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+  text-decoration-color: #D6BE74;
+}
+.main-courses-list__modification--modifier:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
+}
+.main-courses-list__modification--delete {
+  margin-top: 1.5vw;
+  text-align: center;
+  margin-left: 0.5vw;
+  color: #8D3B09;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+  text-decoration-color: #D6BE74;
+}
+.main-courses-list__modification--delete:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
 }
 
 .main-dishes {
@@ -174,72 +289,148 @@ body {
 }
 .starters-dishes {
   text-align: center;
-  margin-top: 25vw;
-  padding-right: 5vw;
+  margin-top: 17vw;
 }
 .starters-dishes__title {
   text-decoration: underline;
   text-underline-offset: 0.5vw;
 }
 .starters-dishes__list {
+  margin-top: 3vw;
+}
+.starters-dishes__modification {
   margin-top: 5vw;
+}
+.starters-dishes__modification--add {
+  margin-top: 1.5vw;
+  text-align: center;
+  color: #8D3B09;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+  text-decoration-color: #D6BE74;
+}
+.starters-dishes__modification--add:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
 }
 
 .starters-list {
-  margin-top: 17vw;
-}
-@media screen and (min-width: 884px) {
-  .starters-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+  margin-top: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .starters-list__image {
   width: 30vw;
 }
 .starters-list__description {
-  margin-top: 5vw;
-  padding: 5vw;
+  padding: 3vw;
 }
 .starters-list__price {
   color: #8D3B09;
 }
+.starters-list__modification {
+  margin-top: 3vw;
+}
+.starters-list__modification--modifier {
+  margin-top: 1.5vw;
+  text-align: center;
+  margin-right: 0.5vw;
+  color: #8D3B09;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+  text-decoration-color: #D6BE74;
+}
+.starters-list__modification--modifier:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
+}
+.starters-list__modification--delete {
+  margin-top: 1.5vw;
+  text-align: center;
+  margin-left: 0.5vw;
+  color: #8D3B09;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+  text-decoration-color: #D6BE74;
+}
+.starters-list__modification--delete:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
+}
 
 .vegetarians-dishes {
   text-align: center;
-  margin-top: 20vw;
-  padding-right: 5vw;
+  margin-top: 17vw;
 }
 .vegetarians-dishes__title {
   text-decoration: underline;
   text-underline-offset: 0.5vw;
 }
 .vegetarians-dishes__list {
+  margin-top: 3vw;
+}
+.vegetarians-dishes__modification {
   margin-top: 5vw;
+}
+.vegetarians-dishes__modification--add {
+  margin-top: 1.5vw;
+  text-align: center;
+  color: #8D3B09;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+  text-decoration-color: #D6BE74;
+}
+.vegetarians-dishes__modification--add:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
 }
 
 .vegetarians-list {
-  margin-top: 17vw;
-}
-@media screen and (min-width: 884px) {
-  .vegetarians-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+  margin-top: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .vegetarians-list__image {
   width: 30vw;
 }
 .vegetarians-list__description {
-  margin-top: 5vw;
-  padding: 5vw;
+  padding: 3vw;
 }
 .vegetarians-list__price {
   color: #8D3B09;
+}
+.vegetarians-list__modification {
+  margin-top: 3vw;
+}
+.vegetarians-list__modification--modifier {
+  margin-top: 1.5vw;
+  text-align: center;
+  margin-right: 0.5vw;
+  color: #8D3B09;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+  text-decoration-color: #D6BE74;
+}
+.vegetarians-list__modification--modifier:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
+}
+.vegetarians-list__modification--delete {
+  margin-top: 1.5vw;
+  text-align: center;
+  margin-left: 0.5vw;
+  color: #8D3B09;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+  text-decoration-color: #D6BE74;
+}
+.vegetarians-list__modification--delete:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
 }
 
 .resa-form__title {
@@ -251,7 +442,6 @@ body {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  height: 110vw;
   margin-top: 5vw;
 }
 .resa-form__form {
@@ -262,23 +452,33 @@ body {
   justify-content: space-around;
 }
 .resa-form__field {
-  align-items: baseline;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  align-content: stretch;
   justify-content: space-between;
+  margin-bottom: 5vw;
 }
-.resa-form__field--input {
-  margin-left: 5vw;
+@media screen and (min-width: 935px) {
+  .resa-form__field {
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
-.resa-form__button {
+@media screen and (min-width: 935px) {
+  .resa-form__field--input {
+    margin-left: 5vw;
+  }
+}
+.resa-form__reservation {
+  margin-top: 5vw;
+}
+.resa-form__reservation--button {
   background-color: #8D3B09;
   color: #D6BE74;
   text-align: center;
-  margin-top: 5vw;
+  cursor: pointer;
 }
-.resa-form__button:hover {
+.resa-form__reservation--button:hover {
   background-color: #D6BE74;
   color: #000000;
 }
@@ -288,6 +488,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+#reservation_form_allergy > label {
+  margin-bottom: 2vw;
 }
 
 .login-form {
@@ -305,25 +508,38 @@ body {
 .login-form__email {
   align-items: baseline;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  align-content: stretch;
+  align-content: center;
   justify-content: space-between;
   width: 35%;
+}
+@media screen and (min-width: 935px) {
+  .login-form__email {
+    flex-direction: row;
+    align-content: stretch;
+  }
 }
 .login-form__password {
   align-items: baseline;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  align-content: stretch;
+  align-content: center;
   justify-content: space-between;
   width: 35%;
+}
+@media screen and (min-width: 935px) {
+  .login-form__password {
+    flex-direction: row;
+    align-content: stretch;
+  }
 }
 .login-form__button {
   background-color: #8D3B09;
   color: #D6BE74;
   text-align: center;
+  cursor: pointer;
 }
 .login-form__button:hover {
   background-color: #D6BE74;
@@ -339,7 +555,6 @@ body {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  height: 100%;
   margin-top: 5vw;
 }
 .register-form__form {
@@ -350,14 +565,30 @@ body {
   justify-content: space-around;
 }
 .register-form__field {
-  align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 5vw;
+}
+@media screen and (min-width: 935px) {
+  .register-form__field {
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
+@media screen and (min-width: 935px) {
+  .register-form__field--input {
+    margin-left: 5vw;
+  }
+}
+.register-form__field-checkbox {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  align-content: stretch;
+  align-items: center;
   justify-content: space-between;
 }
-.register-form__field--input {
+.register-form__field-checkbox--input {
   margin-left: 5vw;
 }
 .register-form__button {
@@ -365,6 +596,7 @@ body {
   color: #D6BE74;
   text-align: center;
   margin-top: 5vw;
+  cursor: pointer;
 }
 .register-form__button:hover {
   background-color: #D6BE74;
@@ -377,6 +609,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+#registration_form_allergy > label {
+  margin-bottom: 2vw;
+}
 
 .famous-dish-card {
   display: flex;
@@ -387,7 +622,7 @@ body {
   margin: 4vw;
   margin-top: 5vw;
 }
-@media screen and (min-width: 884px) {
+@media screen and (min-width: 935px) {
   .famous-dish-card {
     flex-direction: row;
   }
@@ -497,26 +732,7 @@ body {
   margin-top: 3.5vw;
 }
 
-.btn-reservation {
-  border-radius: 1.5rem;
-  font-weight: 500;
-  transition: 0.5s ease-in;
-  margin-top: 5vw;
-  padding: 1vw;
-  background-color: #D6BE74;
-  color: #000000;
-  cursor: pointer;
-}
-.btn-reservation:hover {
-  background-color: #8D3B09;
-  color: #D6BE74;
-}
-
 .main-modification {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin-top: 5vw;
 }
 .main-modification__modifier {
@@ -529,19 +745,6 @@ body {
   text-decoration-color: #D6BE74;
 }
 .main-modification__modifier:hover {
-  color: #D6BE74;
-  text-decoration-color: #8D3B09;
-}
-.main-modification__delete {
-  margin-top: 1.5vw;
-  text-align: center;
-  margin-left: 0.5vw;
-  color: #8D3B09;
-  text-decoration: underline;
-  text-underline-offset: 0.5vw;
-  text-decoration-color: #D6BE74;
-}
-.main-modification__delete:hover {
   color: #D6BE74;
   text-decoration-color: #8D3B09;
 }
@@ -568,14 +771,6 @@ body {
 
 .all-menus {
   text-align: center;
-}
-.all-menus__button {
-  background-color: #8D3B09;
-  color: #D6BE74;
-}
-.all-menus__button:hover {
-  background-color: #D6BE74;
-  color: #000000;
 }
 .all-menus__description {
   margin-top: 10vw;
@@ -627,6 +822,21 @@ body {
   color: #D6BE74;
   text-decoration-color: #8D3B09;
 }
+.all-menus__new {
+  margin-top: 5vw;
+}
+.all-menus__new--add {
+  margin-top: 1.5vw;
+  text-align: center;
+  color: #8D3B09;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+  text-decoration-color: #D6BE74;
+}
+.all-menus__new--add:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
+}
 
 .header {
   background-color: #000000;
@@ -638,7 +848,7 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-@media screen and (min-width: 884px) {
+@media screen and (min-width: 935px) {
   .header__container {
     height: auto;
     display: flex;
@@ -661,7 +871,7 @@ body {
 .header__container--nav {
   display: none;
 }
-@media screen and (min-width: 884px) {
+@media screen and (min-width: 935px) {
   .header__container--nav {
     display: flex;
     flex-flow: row wrap;
@@ -678,7 +888,7 @@ body {
   text-align: center;
   transition: color 0.5s ease;
 }
-@media screen and (min-width: 884px) {
+@media screen and (min-width: 935px) {
   .header__link {
     margin: 0.07rem;
   }
@@ -688,7 +898,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   right: 0;
   transition: all 400ms;
 }
@@ -701,7 +911,7 @@ body {
   border: none;
   cursor: pointer;
 }
-@media screen and (min-width: 884px) {
+@media screen and (min-width: 935px) {
   .header__container--btn {
     display: none;
   }
@@ -782,4 +992,25 @@ body {
 .btn__primary:hover {
   background-color: #8D3B09;
   color: #D6BE74;
+}
+
+.btn-reservation {
+  border-radius: 1.5rem;
+  font-weight: 500;
+  transition: 0.5s ease-in;
+  margin-top: 5vw;
+  padding: 1vw;
+  background-color: #D6BE74;
+  color: #000000;
+  cursor: pointer;
+}
+.btn-reservation:hover {
+  background-color: #8D3B09;
+  color: #D6BE74;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */

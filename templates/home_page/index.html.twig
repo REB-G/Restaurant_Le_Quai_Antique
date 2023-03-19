@@ -19,10 +19,7 @@
     <h2 class="famous-dishes__title">{{page.sectionDishesTitle}}</h2>
     <p class="famous-dishes__text-presentation">{{page.sectionDishesText}}</p>
     {% if is_granted('ROLE_ADMIN') %}
-    <div class='main-modification'>
         <a href="{{ path('app_home_page_edit', {'id': page.id}) }}" class='main-modification__modifier'>Modifier les informations de présentation</a>
-        <a href="{{ path('app_home_page_delete', {'id': page.id}) }}" class='main-modification__delete'>Supprimer les informations de présentation</a>
-    </div>
     {% endif %}
     {% endfor %}
     {% for dish in famous_dishes %}

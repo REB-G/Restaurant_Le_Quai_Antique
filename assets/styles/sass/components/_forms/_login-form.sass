@@ -16,11 +16,14 @@
     &__email
         align-items: baseline
         display: flex
-        flex-direction: row
+        flex-direction: column
         flex-wrap: wrap
-        align-content: stretch
+        align-content: center
         justify-content: space-between
         width: 35%
+        +utils.responsive("tablet")
+            flex-direction: row
+            align-content: stretch
 
         &--label
             @extend %paragraphe-s
@@ -31,11 +34,14 @@
     &__password
         align-items: baseline
         display: flex
-        flex-direction: row
+        flex-direction: column
         flex-wrap: wrap
-        align-content: stretch
+        align-content: center
         justify-content: space-between
         width: 35%
+        +utils.responsive("tablet")
+            flex-direction: row
+            align-content: stretch
 
         &--label
             @extend %paragraphe-s
@@ -48,6 +54,7 @@
         color: utils.$gold
         @extend %paragraphe-s
         text-align: center
+        cursor: pointer
         &:hover
             background-color: utils.$gold
             color: utils.$black

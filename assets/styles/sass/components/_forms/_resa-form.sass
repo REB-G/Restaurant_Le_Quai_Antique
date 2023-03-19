@@ -11,7 +11,6 @@
         align-items: center
         justify-content: space-around
         flex-direction: column
-        height: 110vw
         margin-top: 5vw
 
     &__form
@@ -22,31 +21,41 @@
         justify-content: space-around
 
     &__field
-        align-items: baseline
         display: flex
-        flex-direction: row
+        flex-direction: column
         flex-wrap: wrap
-        align-content: stretch
         justify-content: space-between
+        margin-bottom:5vw
+        +utils.responsive("tablet")
+            flex-direction: row
+            align-items: baseline
+
         &--label
             @extend %paragraphe-s
 
         &--input
             @extend %paragraphe-s
-            margin-left: 5vw
+            +utils.responsive("tablet")
+                margin-left: 5vw
 
-    &__button
-        background-color: utils.$brown
-        color: utils.$gold
-        @extend %paragraphe-s
-        text-align: center
+    &__reservation
         margin-top: 5vw
-        &:hover
-            background-color: utils.$gold
-            color: utils.$black
+        
+        &--button
+            background-color: utils.$brown
+            color: utils.$gold
+            @extend %paragraphe-s
+            text-align: center
+            cursor: pointer
+            &:hover
+                background-color: utils.$gold
+                color: utils.$black
 
 #reservation_form_allergy
     display: flex
     flex-direction: column
     align-items: center
     justify-content: center
+
+    & > label
+        margin-bottom: 2vw

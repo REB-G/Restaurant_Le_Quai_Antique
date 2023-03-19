@@ -114,14 +114,14 @@ class RegistrationFormType extends AbstractType
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
                 'row_attr' => [
-                    'class' => 'register-form__field'
+                    'class' => 'register-form__field-checkbox'
                 ],
                 'label' => 'Veuillez accepter nos conditions générales d\'utilisation',
                 'label_attr' => [
-                    'class' => 'register-form__field--label'
+                    'class' => 'register-form__field-checkbox--label'
                 ],
                 'attr' => [
-                    'class' => 'register-form__field--input',
+                    'class' => 'register-form__field-checkbox--input',
                 ],
                 'constraints' => [
                     new IsTrue([
