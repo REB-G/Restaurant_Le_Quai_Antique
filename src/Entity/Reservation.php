@@ -202,18 +202,6 @@ class Reservation
     public function __toString(): string
     {
         return $this->reservationDate->format('d/m/Y')
-        . ' ' . $this->reservationHour->getHour()
-        . ' ' . $this->service->getName()
-        . ' ' . $this->name
-        . ' ' . $this->firstname
-        . ' ' . $this->email
-        . ' ' . $this->numberOfGuests
-        . ' ' . $this->allergy
-        . ' ' . $this->createdAt->format('d/m/Y')
-        . ' ' . $this->user->getname()
-        . ' ' . $this->user->getfirstname()
-        . ' ' . $this->user->getEmail()
-        . ' ' . $this->user->getDefaultNumberOfGuests()
-        . ' ' . $this->user->getAllergy();
+        . ' ' . $this->reservationHour->getHour();
     }
 }

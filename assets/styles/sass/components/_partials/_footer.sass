@@ -15,15 +15,33 @@
     &__container
         +utils.responsive("litle-tablet")
             display: flex
-            align-items: flex-start
+            align-items: baseline
             justify-content: space-between
-    
-    &__contact
-        margin-top: 2vw
+            margin-top: 5vw
+
+    &__opening
+        margin-right: 5vw
 
         &--title
             text-decoration: underline
             @extend %title-4
+            text-underline-offset: 0.2vw
+
+        &--days
+            @extend %paragraphe-xs
+            margin-top: 0.5vw
+
+        &--hours
+            @extend %paragraphe-xs
+
+    &__contact
+        margin-right: 5vw
+
+        &--title
+            text-decoration: underline
+            @extend %title-4
+            text-underline-offset: 0.2vw
+
         
         &--links
             @extend %paragraphe-xs
@@ -32,11 +50,13 @@
             color: utils.$brown
     
     &__legals
-        margin-top: 2vw
+        margin-right: 5vw
 
         &--title
             text-decoration: underline
             @extend %title-4
+            text-underline-offset: 0.2vw
+
         
         &--links
             @extend %paragraphe-xs

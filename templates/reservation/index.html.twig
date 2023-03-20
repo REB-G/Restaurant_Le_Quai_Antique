@@ -3,7 +3,7 @@
 {% block title %}Le Quai Antique - Réservation{% endblock %}
 
 {% block body %}
-<h1 class='resa-form__title'>Formulaire de réservation.</h1>
+<h1 class='resa-form__title'>Réservation.</h1>
 
 <section class="js-reservation-submit resa-form__flux">
 {{ form_start(reservationForm, {'attr': {'class': 'resa-form__form'}}) }}
@@ -19,6 +19,22 @@
         <button type="submit" class="btn resa-form__reservation--button">Réserver</button>
     </div>
 {{ form_end(reservationForm) }}
+</section>
+
+<section class='js-reservation-ok reservation-success-hide'>
+    <p class='reservation-success__info'>Votre réservation a bien été effectuée !</p>
+    <div class='reservation-success__redirection'>
+        <a href="{{path('app_home_page_index')}}" class='reservation-success__redirection--link'>Retourner à la page d'accueil</a>
+        <a href="{{path('app_dishes_index')}}" class='reservation-success__redirection--link'>Consulter la carte du restaurant</a>
+        <a href="{{path('app_menus_index')}}" class='reservation-success__redirection--link'>Consulter les menus</a>
+    </div>
+</section>
+
+<section class='js-reservation-nok reservation-error-hide'>
+    <p class='reservation-error__info'>Il n'y a plus assez de places disponible pour cette réservation, veuillez sélectionner une autre date, ou un autre service.</p>
+    <div class='reservation-error__redirection'>
+        <a href="{{path('app_reservation')}}" class='reservation-error__redirection--link'>Retourner au formulaire de réservation</a>
+    </div>
 </section>
 
 {% endblock %}

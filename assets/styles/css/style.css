@@ -28,17 +28,17 @@ ul {
   font-size: 1.7rem;
 }
 
-.footer__contact--title, .footer__legals--title {
+.footer__opening--title, .footer__contact--title, .footer__legals--title {
   font-family: "garamond", serif;
   font-size: 1.3rem;
 }
 
-.main-menus__description, .main__text-presentation, .main-dishes__description {
+.main-menus__description, .main__text-presentation, .reservation-success__info, .reservation-error__info, .main-dishes__description {
   font-family: "franckruehl", serif;
   font-size: 2rem;
 }
 
-.all-menus__description--text, .all-menus__description--price, .description__text-presentation, .famous-dishes__text-presentation, .famous-dish-card__description--text-presentation {
+.all-menus__description--text, .all-menus__description--price, .description__text-presentation, .famous-dishes__text-presentation, .famous-dish-card__description--text-presentation, .reservation-success__redirection--link, .reservation-error__redirection--link {
   font-family: "franckruehl", serif;
   font-size: 1.7rem;
 }
@@ -48,7 +48,7 @@ ul {
   font-size: 1.3rem;
 }
 
-.footer__contact--links, .footer__legals--links, .footer__copyright {
+.footer__opening--days, .footer__opening--hours, .footer__contact--links, .footer__legals--links, .footer__copyright {
   font-family: "franckruehl", serif;
   font-size: 0.75rem;
 }
@@ -433,6 +433,10 @@ body {
   text-decoration-color: #8D3B09;
 }
 
+.resa-form-hide {
+  display: none;
+}
+
 .resa-form__title {
   text-align: center;
   margin-top: 5vw;
@@ -491,6 +495,74 @@ body {
 }
 #reservation_form_allergy > label {
   margin-bottom: 2vw;
+}
+
+.reservation-success-hide {
+  display: none;
+}
+
+.reservation-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.reservation-success__info {
+  text-align: center;
+  margin-top: 10vw;
+}
+.reservation-success__redirection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vw;
+}
+.reservation-success__redirection--link {
+  margin-top: 5vw;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+  text-decoration-color: #D6BE74;
+  text-align: center;
+  color: #8D3B09;
+}
+.reservation-success__redirection--link:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
+}
+
+.reservation-error-hide {
+  display: none;
+}
+
+.reservation-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.reservation-error__info {
+  text-align: center;
+  margin: 10vw;
+}
+.reservation-error__redirection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vw;
+}
+.reservation-error__redirection--link {
+  margin-top: 5vw;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+  text-decoration-color: #D6BE74;
+  text-align: center;
+  color: #8D3B09;
+}
+.reservation-error__redirection--link:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
 }
 
 .login-form {
@@ -1270,24 +1342,37 @@ body {
 @media screen and (min-width: 768px) {
   .footer__container {
     display: flex;
-    align-items: flex-start;
+    align-items: baseline;
     justify-content: space-between;
+    margin-top: 5vw;
   }
 }
+.footer__opening {
+  margin-right: 5vw;
+}
+.footer__opening--title {
+  text-decoration: underline;
+  text-underline-offset: 0.2vw;
+}
+.footer__opening--days {
+  margin-top: 0.5vw;
+}
 .footer__contact {
-  margin-top: 2vw;
+  margin-right: 5vw;
 }
 .footer__contact--title {
   text-decoration: underline;
+  text-underline-offset: 0.2vw;
 }
 .footer__contact--links:hover {
   color: #8D3B09;
 }
 .footer__legals {
-  margin-top: 2vw;
+  margin-right: 5vw;
 }
 .footer__legals--title {
   text-decoration: underline;
+  text-underline-offset: 0.2vw;
 }
 .footer__legals--links:hover {
   color: #8D3B09;

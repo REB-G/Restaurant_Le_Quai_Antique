@@ -1,5 +1,8 @@
 @use "../../../sass/utils/_main" as utils
 
+.resa-form-hide
+    display: none
+
 .resa-form
     &__title
         @extend %title-1
@@ -59,3 +62,69 @@
 
     & > label
         margin-bottom: 2vw
+
+.reservation-success-hide
+    display: none
+
+.reservation-success
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    &__info
+        @extend %paragraphe-l
+        text-align: center
+        margin-top: 10vw
+
+    &__redirection
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        margin-top: 5vw
+
+        &--link
+            @extend %paragraphe-m
+            margin-top: 5vw
+            text-decoration: underline
+            text-underline-offset: 0.2rem
+            text-decoration-color: utils.$gold
+            text-align: center
+            color: utils.$brown
+            &:hover
+                color: utils.$gold
+                text-decoration-color: utils.$brown
+
+.reservation-error-hide
+    display: none
+
+.reservation-error
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    &__info
+        @extend %paragraphe-l
+        text-align: center
+        margin: 10vw
+
+    &__redirection
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        margin-top: 5vw
+
+        &--link
+            @extend %paragraphe-m
+            margin-top: 5vw
+            text-decoration: underline
+            text-underline-offset: 0.2rem
+            text-decoration-color: utils.$gold
+            text-align: center
+            color: utils.$brown
+            &:hover
+                color: utils.$gold
+                text-decoration-color: utils.$brown
