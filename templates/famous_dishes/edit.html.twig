@@ -1,13 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit FamousDishes{% endblock %}
+{% block title %}Le Quai Antique - Modification d'un plat phare{% endblock %}
 
 {% block body %}
-    <h1>Edit FamousDishes</h1>
+    <h1 class='famous-dishes-form__title'>Modification d'un plat phare</h1>
 
     {{ include('famous_dishes/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('app_famous_dishes_index') }}">back to list</a>
+    <div class='flex-center famous-dishes-form__modification'>
+        <a href="{{ path('app_famous_dishes_index') }}" class='btn famous-dishes-form__modification--button'>Retourner à la page d'accueil</a>
+    </div>
 
     {{ include('famous_dishes/_delete_form.html.twig') }}
 {% endblock %}

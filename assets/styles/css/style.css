@@ -13,7 +13,7 @@ ul {
   list-style: none;
 }
 
-.main-menus__title, .main__title, .register-form__title, .login-form__title, .resa-form__title, .main-dishes__title {
+.main-menus__title, .main__title, .famous-dishes-form__title, .famous-dishes-index__title, .home-page-form__title, .register-form__title, .login-form__title, .resa-form__title, .main-dishes__title {
   font-family: "garamond", serif;
   font-size: 3rem;
 }
@@ -43,7 +43,7 @@ ul {
   font-size: 1.7rem;
 }
 
-.btn-reservation, .header__link, .all-menus__dish, .all-menus__modification--modifier, .all-menus__modification--delete, .all-menus__new--add, .lunch-menu__information, .main-modification__modifier, .famous-dish-card__modification--modifier, .famous-dish-card__modification--delete, .famous-dish-card__modification--add, .register-form__field--label, .register-form__field--input, .register-form__field-checkbox--label, .register-form__field-checkbox--input, .register-form__button, .login-form__email--label, .login-form__email--input, .login-form__password--label, .login-form__password--input, .login-form__button, .resa-form__field--label, .resa-form__field--input, .resa-form__reservation--button, .vegetarians-dishes__modification--add, .vegetarians-list__description--details, .vegetarians-list__price, .vegetarians-list__modification--modifier, .vegetarians-list__modification--delete, .starters-dishes__modification--add, .starters-list__description--details, .starters-list__price, .starters-list__modification--modifier, .starters-list__modification--delete, .main-courses-dishes__modification--add, .main-courses-list__description--details, .main-courses-list__price, .main-courses-list__modification--modifier, .main-courses-list__modification--delete, .desserts-dishes__modification--add, .desserts-list__description--details, .desserts-list__price, .desserts-list__modification--modifier, .desserts-list__modification--delete, .burgers-dishes__modification--add, .burgers-list__description--details, .burgers-list__price, .burgers-list__modification--modifier, .burgers-list__modification--delete {
+.btn-reservation, .header__link, .all-menus__dish, .all-menus__modification--modifier, .all-menus__modification--delete, .all-menus__new--add, .lunch-menu__information, .main-modification__modifier, .famous-dish-card__modification--modifier, .famous-dish-card__modification--delete, .famous-dish-card__modification--add, .famous-dishes-form__field--label, .famous-dishes-form__field--input, .famous-dishes-form__field--input-file, .famous-dishes-form__modification--button, .home-page-form__field--label, .home-page-form__field--input, .home-page-form__modification--button, .register-form__field--label, .register-form__field--input, .register-form__field-checkbox--label, .register-form__field-checkbox--input, .register-form__button, .login-form__email--label, .login-form__email--input, .login-form__password--label, .login-form__password--input, .login-form__button, .resa-form__field--label, .resa-form__field--input, .resa-form__reservation--button, .vegetarians-dishes__modification--add, .vegetarians-list__description--details, .vegetarians-list__price, .vegetarians-list__modification--modifier, .vegetarians-list__modification--delete, .starters-dishes__modification--add, .starters-list__description--details, .starters-list__price, .starters-list__modification--modifier, .starters-list__modification--delete, .main-courses-dishes__modification--add, .main-courses-list__description--details, .main-courses-list__price, .main-courses-list__modification--modifier, .main-courses-list__modification--delete, .desserts-dishes__modification--add, .desserts-list__description--details, .desserts-list__price, .desserts-list__modification--modifier, .desserts-list__modification--delete, .burgers-dishes__modification--add, .burgers-list__description--details, .burgers-list__price, .burgers-list__modification--modifier, .burgers-list__modification--delete {
   font-family: "franckruehl", serif;
   font-size: 1.3rem;
 }
@@ -611,6 +611,92 @@ body {
 }
 #registration_form_allergy > label {
   margin-bottom: 2vw;
+}
+
+.home-page-form__title {
+  text-align: center;
+  margin-top: 5vw;
+}
+.home-page-form__flux {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-top: 5vw;
+}
+.home-page-form__form {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+}
+.home-page-form__field {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 5vw;
+}
+.home-page-form__modification {
+  margin-top: 5vw;
+}
+.home-page-form__modification--button {
+  background-color: #8D3B09;
+  color: #D6BE74;
+  text-align: center;
+  cursor: pointer;
+}
+.home-page-form__modification--button:hover {
+  background-color: #D6BE74;
+  color: #000000;
+}
+
+.famous-dishes-form__title {
+  text-align: center;
+  margin-top: 5vw;
+}
+.famous-dishes-form__flux {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-top: 5vw;
+}
+.famous-dishes-form__form {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+}
+.famous-dishes-form__field {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 5vw;
+}
+.famous-dishes-form__field--input-file {
+  cursor: pointer;
+}
+.famous-dishes-form__modification {
+  margin-top: 5vw;
+}
+.famous-dishes-form__modification--button {
+  background-color: #8D3B09;
+  color: #D6BE74;
+  text-align: center;
+  cursor: pointer;
+}
+.famous-dishes-form__modification--button:hover {
+  background-color: #D6BE74;
+  color: #000000;
+}
+
+.famous-dishes-index__title {
+  text-align: center;
+  margin: 5vw;
 }
 
 .famous-dish-card {

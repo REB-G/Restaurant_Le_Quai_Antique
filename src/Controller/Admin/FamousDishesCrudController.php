@@ -34,7 +34,7 @@ class FamousDishesCrudController extends AbstractCrudController
                 ->hideOnForm(),
             TextField::new('name', 'Nom du plat'),
             TextareaField::new('description', 'Description du plat'),
-            TextField::new('imageFile')
+            TextField::new('imageFile', 'Image')
                 ->setFormType(VichImageType::class),
             AssociationField::new('homePage', 'Page d\'accueil')
         ];

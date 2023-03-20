@@ -1,4 +1,6 @@
-<form method="post" action="{{ path('app_famous_dishes_delete', {'id': famous_dish.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+<form method="post" action="{{ path('app_famous_dishes_delete', {'id': famous_dish.id}) }}" onsubmit="return confirm('Êtes-vous sûre de vouloir supprimer ce plat phare ?');">
     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ famous_dish.id) }}">
-    <button class="btn">Delete</button>
+    <div class='flex-center home-page-form__modification'>
+        <button class="btn famous-dishes-form__modification--button">Supprimer</button>
+    </div>
 </form>
