@@ -1,0 +1,47 @@
+@use "../../../sass/utils/_main" as utils
+
+.home-page-form
+    &__title
+        @extend %title-1
+        text-align: center
+        margin-top: 5vw
+
+    &__flux
+        display: flex
+        align-items: center
+        justify-content: space-around
+        flex-direction: column
+        margin-top: 5vw
+
+    &__form
+        display: flex
+        height: 100%
+        flex-direction: column
+        align-items: stretch
+        justify-content: space-around
+
+    &__field
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-bottom:5vw
+
+        &--label
+            @extend %paragraphe-s
+
+        &--input
+            @extend %paragraphe-s
+
+    &__modification
+        margin-top: 5vw
+
+        &--button
+            background-color: utils.$brown
+            color: utils.$gold
+            @extend %paragraphe-s
+            text-align: center
+            cursor: pointer
+            &:hover
+                background-color: utils.$gold
+                color: utils.$black
