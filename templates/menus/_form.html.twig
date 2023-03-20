@@ -1,4 +1,8 @@
-{{ form_start(form) }}
+<section class='menus-form__flux'>
+{{ form_start(form, {'attr': {'class': 'menus-form__form'}}) }}
     {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <div class='flex-center menus-form__modification'>
+        <button class="btn menus-form__modification--button">Modifier</button>
+    </div>
 {{ form_end(form) }}
+</section>

@@ -3,11 +3,13 @@
 {% block title %}Le Quai Antique - Modification du plat{% endblock %}
 
 {% block body %}
-    <h1>Modification du plat</h1>
+    <h1 class='dishes-form__title'>Modification du plat</h1>
 
     {{ include('dishes/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('app_dishes_index') }}">Retourner à la carte des plats</a>
+    <div class='flex-center dishes-form__modification'>
+        <a href="{{ path('app_dishes_index') }}" class='btn dishes-form__modification--button'>Retourner à la carte des plats</a>
+    </div>
 
     {{ include('dishes/_delete_form.html.twig') }}
 {% endblock %}

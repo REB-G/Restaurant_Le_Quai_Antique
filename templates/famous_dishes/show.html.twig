@@ -1,34 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Le Quai Antique - Récapitulatif des plats phares{% endblock %}
+{% block title %}Le Quai Antique - Plat phare{% endblock %}
 
 {% block body %}
-    <h1 class='famous-dishes-form__title'>Récapitulatif des plats phare.</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ famous_dish.id }}</td>
-            </tr>
-            <tr>
-                <th>Nom du plat</th>
-                <td>{{ famous_dish.name }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ famous_dish.description }}</td>
-            </tr>
-            <tr>
-                <th>ImageName</th>
-                <td>{{ famous_dish.imageName }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_famous_dishes_index') }}">Retourner à la page d'accueil</a>
-
-    <a href="{{ path('app_famous_dishes_edit', {'id': famous_dish.id}) }}">Modifier</a>
-
+<section class="famous-dish-show">
+    <h1 class='famous-dish-show__title'>{{famous_dish.name}}</h1>
+    <div class='famous-dish-show__flux'>
+        <div class='flex-center famous-dish-show__field'>
+            <p class='famous-dish-show__field--name'>Image: </p>
+            <img class="famous-dish-show__field--image" src="{{ vich_uploader_asset(famous_dish, 'imageFile') }}" alt={{famous_dish.name}}>
+        </div>
+        <div class='flex-center famous-dish-show__field'>
+            <p class='famous-dish-show__field--name'>Nom du plat: </p>
+            <p class="famous-dish-show__field--info">{{famous_dish.name}}</p>
+        </div>
+        <div class='flex-center famous-dish-show__field'>
+            <p class='famous-dish-show__field--name'>Description du plat: </p>
+            <p class="famous-dish-show__field--info">{{famous_dish.description}}</p>
+        </div>
+        <div class='flex-center famous-dish-show__modification'>
+            <a href="{{ path('app_dishes_index') }}" class='btn famous-dish-show__modification--button'>Retour à la liste des plats</a>
+            <a href="{{ path('app_dishes_edit', {'id': famous_dish.id}) }}" class='btn famous-dish-show__modification--button'>Modifier</a>
+        </div>
+    </div>
     {{ include('famous_dishes/_delete_form.html.twig') }}
+</section>
+
 {% endblock %}

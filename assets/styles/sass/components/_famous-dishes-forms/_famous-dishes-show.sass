@@ -1,0 +1,53 @@
+@use "../../../sass/utils/_main" as utils
+
+.famous-dish-show
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    &__flux
+        display: flex
+        height: 100%
+        flex-direction: column
+        align-items: stretch
+        justify-content: space-around
+
+    &__title
+        @extend %title-2
+        text-align: center
+        margin: 5vw
+
+    &__field
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-bottom:5vw
+
+        &--name
+            @extend %paragraphe-s
+            color: utils.$brown
+
+        &--image
+            max-width: 25vw
+
+        &--info
+            @extend %paragraphe-s
+
+    &__modification
+        display: flex
+        align-items: center
+        justify-content: space-around
+        flex-direction: column
+
+        &--button
+            background-color: utils.$brown
+            color: utils.$gold
+            @extend %paragraphe-s
+            text-align: center
+            cursor: pointer
+            margin-top: 5vw
+            &:hover
+                background-color: utils.$gold
+                color: utils.$black

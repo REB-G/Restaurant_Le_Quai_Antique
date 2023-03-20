@@ -13,12 +13,12 @@ ul {
   list-style: none;
 }
 
-.main-menus__title, .main__title, .famous-dishes-form__title, .famous-dishes-index__title, .home-page-form__title, .register-form__title, .login-form__title, .resa-form__title, .main-dishes__title {
+.main-menus__title, .main__title, .dishes-form__title, .menus-form__title, .famous-dishes-form__title, .famous-dishes-index__title, .home-page-form__title, .register-form__title, .login-form__title, .resa-form__title, .main-dishes__title {
   font-family: "garamond", serif;
   font-size: 3rem;
 }
 
-.all-menus__description--title, .description__title, .famous-dishes__title, .famous-dish-card__description--title, .vegetarians-dishes__title, .starters-dishes__title, .main-courses-dishes__title, .desserts-dishes__title, .burgers-dishes__title {
+.all-menus__description--title, .description__title, .famous-dishes__title, .famous-dish-card__description--title, .dish-show__title, .menu-show__title, .famous-dish-show__title, .vegetarians-dishes__title, .starters-dishes__title, .main-courses-dishes__title, .desserts-dishes__title, .burgers-dishes__title {
   font-family: "garamond", serif;
   font-size: 2.3rem;
 }
@@ -43,7 +43,7 @@ ul {
   font-size: 1.7rem;
 }
 
-.btn-reservation, .header__link, .all-menus__dish, .all-menus__modification--modifier, .all-menus__modification--delete, .all-menus__new--add, .lunch-menu__information, .main-modification__modifier, .famous-dish-card__modification--modifier, .famous-dish-card__modification--delete, .famous-dish-card__modification--add, .famous-dishes-form__field--label, .famous-dishes-form__field--input, .famous-dishes-form__field--input-file, .famous-dishes-form__modification--button, .home-page-form__field--label, .home-page-form__field--input, .home-page-form__modification--button, .register-form__field--label, .register-form__field--input, .register-form__field-checkbox--label, .register-form__field-checkbox--input, .register-form__button, .login-form__email--label, .login-form__email--input, .login-form__password--label, .login-form__password--input, .login-form__button, .resa-form__field--label, .resa-form__field--input, .resa-form__reservation--button, .vegetarians-dishes__modification--add, .vegetarians-list__description--details, .vegetarians-list__price, .vegetarians-list__modification--modifier, .vegetarians-list__modification--delete, .starters-dishes__modification--add, .starters-list__description--details, .starters-list__price, .starters-list__modification--modifier, .starters-list__modification--delete, .main-courses-dishes__modification--add, .main-courses-list__description--details, .main-courses-list__price, .main-courses-list__modification--modifier, .main-courses-list__modification--delete, .desserts-dishes__modification--add, .desserts-list__description--details, .desserts-list__price, .desserts-list__modification--modifier, .desserts-list__modification--delete, .burgers-dishes__modification--add, .burgers-list__description--details, .burgers-list__price, .burgers-list__modification--modifier, .burgers-list__modification--delete {
+.btn-reservation, .header__link, .all-menus__dish, .all-menus__modification--modifier, .all-menus__modification--delete, .all-menus__new--add, .lunch-menu__information, .main-modification__modifier, .famous-dish-card__modification--modifier, .famous-dish-card__modification--delete, .famous-dish-card__modification--add, .dish-show__field--name, .dish-show__field--info, .dish-show__modification--button, .dishes-form__field--label, .dishes-form__field--input, .dishes-form__modification--button, .menu-show__field--name, .menu-show__field--info, .menu-show__modification--button, .menus-form__field--label, .menus-form__field--input, .menus-form__modification--button, .famous-dish-show__field--name, .famous-dish-show__field--info, .famous-dish-show__modification--button, .famous-dishes-form__field--label, .famous-dishes-form__field--input, .famous-dishes-form__field--input-file, .famous-dishes-form__modification--button, .home-page-form__field--label, .home-page-form__field--input, .home-page-form__modification--button, .register-form__field--label, .register-form__field--input, .register-form__field-checkbox--label, .register-form__field-checkbox--input, .register-form__button, .login-form__email--label, .login-form__email--input, .login-form__password--label, .login-form__password--input, .login-form__button, .resa-form__field--label, .resa-form__field--input, .resa-form__reservation--button, .vegetarians-dishes__modification--add, .vegetarians-list__description--details, .vegetarians-list__price, .vegetarians-list__modification--modifier, .vegetarians-list__modification--delete, .starters-dishes__modification--add, .starters-list__description--details, .starters-list__price, .starters-list__modification--modifier, .starters-list__modification--delete, .main-courses-dishes__modification--add, .main-courses-list__description--details, .main-courses-list__price, .main-courses-list__modification--modifier, .main-courses-list__modification--delete, .desserts-dishes__modification--add, .desserts-list__description--details, .desserts-list__price, .desserts-list__modification--modifier, .desserts-list__modification--delete, .burgers-dishes__modification--add, .burgers-list__description--details, .burgers-list__price, .burgers-list__modification--modifier, .burgers-list__modification--delete {
   font-family: "franckruehl", serif;
   font-size: 1.3rem;
 }
@@ -697,6 +697,238 @@ body {
 .famous-dishes-index__title {
   text-align: center;
   margin: 5vw;
+}
+
+.famous-dish-show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.famous-dish-show__flux {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+}
+.famous-dish-show__title {
+  text-align: center;
+  margin: 5vw;
+}
+.famous-dish-show__field {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 5vw;
+}
+.famous-dish-show__field--name {
+  color: #8D3B09;
+}
+.famous-dish-show__field--image {
+  max-width: 25vw;
+}
+.famous-dish-show__modification {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.famous-dish-show__modification--button {
+  background-color: #8D3B09;
+  color: #D6BE74;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 5vw;
+}
+.famous-dish-show__modification--button:hover {
+  background-color: #D6BE74;
+  color: #000000;
+}
+
+.menus-form__title {
+  text-align: center;
+  margin-top: 5vw;
+}
+.menus-form__flux {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-top: 5vw;
+}
+.menus-form__form {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+}
+.menus-form__field {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 5vw;
+}
+.menus-form__modification {
+  margin-top: 5vw;
+}
+.menus-form__modification--button {
+  background-color: #8D3B09;
+  color: #D6BE74;
+  text-align: center;
+  cursor: pointer;
+}
+.menus-form__modification--button:hover {
+  background-color: #D6BE74;
+  color: #000000;
+}
+
+#menus_dish {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#menus_dish > label {
+  margin-bottom: 2vw;
+}
+
+.menu-show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.menu-show__flux {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+}
+.menu-show__title {
+  text-align: center;
+  margin: 5vw;
+}
+.menu-show__field {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 5vw;
+}
+.menu-show__field--name {
+  color: #8D3B09;
+}
+.menu-show__field--image {
+  max-width: 25vw;
+}
+.menu-show__modification {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.menu-show__modification--button {
+  background-color: #8D3B09;
+  color: #D6BE74;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 5vw;
+}
+.menu-show__modification--button:hover {
+  background-color: #D6BE74;
+  color: #000000;
+}
+
+.dishes-form__title {
+  text-align: center;
+  margin-top: 5vw;
+}
+.dishes-form__flux {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-top: 5vw;
+}
+.dishes-form__form {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+}
+.dishes-form__field {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 5vw;
+}
+.dishes-form__modification {
+  margin-top: 5vw;
+}
+.dishes-form__modification--button {
+  background-color: #8D3B09;
+  color: #D6BE74;
+  text-align: center;
+  cursor: pointer;
+}
+.dishes-form__modification--button:hover {
+  background-color: #D6BE74;
+  color: #000000;
+}
+
+.dish-show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dish-show__flux {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+}
+.dish-show__title {
+  text-align: center;
+  margin: 5vw;
+}
+.dish-show__field {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 5vw;
+}
+.dish-show__field--name {
+  color: #8D3B09;
+}
+.dish-show__field--image {
+  max-width: 25vw;
+}
+.dish-show__modification {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.dish-show__modification--button {
+  background-color: #8D3B09;
+  color: #D6BE74;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 5vw;
+}
+.dish-show__modification--button:hover {
+  background-color: #D6BE74;
+  color: #000000;
 }
 
 .famous-dish-card {

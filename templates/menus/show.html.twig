@@ -1,35 +1,56 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Menus{% endblock %}
+{% block title %}Le Quai Antique - Menus{% endblock %}
 
 {% block body %}
 
-	<h2 class="lunch-menu__description--title">{{menu.title}}</h2>
-	<p class="lunch-menu__description--text">{{menu.description}}</p>
-    <p class="lunch-menu__description--price">{{menu.price}}</p>
-    {% if menu.dish is empty %}
-        <p>Voir la carte du jour proposée au restaurant.</p>
-    {% else %}
-        <p>Entrée :</p>
-        <ul>
-            {% for dish in menu.dish | filter(dish => dish.category == "Entrée") %}
-            <li>{{dish.name}}</li>
-            {% endfor %}
-        </ul>
-        <p>Plat :</p>
-        <ul>
-            {% for dish in menu.dish | filter(dish => dish.category == "Plat") %}
-            <li>{{dish.name}}</li>
-            {% endfor %}
-        </ul>
-        <p>Dessert :</p>
-        <ul>
-            {% for dish in menu.dish | filter(dish => dish.category == "Dessert") %}
-            <li>{{dish.name}}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
-    <a href="{{ path('app_menus_edit', {'id': menu.id}) }}">Modifier</a>
-    <a href="{{ path('app_menus_index') }}">Retourner à la liste des menus</a>
+<section class='menu-show'>
+	<h1 class='menu-show__title'>{{menu.title}}</h1>
+    <div class='menu-show__flux'>
+        <div class='flex-center menu-show__field'>
+            <p class='menu-show__field--name'>Description du menu: </p>
+            <p class="menu-show__field--info">{{menu.description}}</p>
+        </div>
+        <div class='flex-center menu-show__field'>
+            <p class='menu-show__field--name'>Prix du menu: </p>
+            <p class="menu-show__field--info">{{menu.price}}</p>
+        </div>
+        {% if menu.dish is empty %}
+        <div class='flex-center menu-show__field'>
+            <p class='menu-show__field--name'>Plats :</p>
+            <p class="menu-show__field--info">Voir la carte du jour proposée au restaurant.</p>
+        </div>
+        {% else %}
+        <div class='flex-center menu-show__field'>
+            <p class='menu-show__field--name'>Entrée :</p>
+            <ul>
+                {% for dish in menu.dish | filter(dish => dish.category == "Entrée") %}
+                <li class="menu-show__field--info">{{dish.name}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class='flex-center menu-show__field'>
+            <p class='menu-show__field--name'>Plat :</p>
+            <ul>
+                {% for dish in menu.dish | filter(dish => dish.category == "Plat") %}
+                <li class="menu-show__field--info">{{dish.name}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class='flex-center menu-show__field'>
+            <p class='menu-show__field--name'>Dessert :</p>
+            <ul>
+                {% for dish in menu.dish | filter(dish => dish.category == "Dessert") %}
+                <li class="menu-show__field--info">{{dish.name}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        <div class='flex-center menu-show__modification'>
+            <a href="{{ path('app_menus_edit', {'id': menu.id}) }}" class='btn menu-show__modification--button'>Modifier</a>
+            <a href="{{ path('app_menus_index') }}" class='btn menu-show__modification--button'>Retourner à la liste des menus</a>
+        </div>
+    </div>
     {{ include('menus/_delete_form.html.twig') }}
+</section>
 {% endblock %}

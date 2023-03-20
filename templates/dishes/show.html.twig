@@ -4,15 +4,31 @@
 
 {% block body %}
 
-    <h1>{{dish.name}}</h1>
-    <img class="bruschetta__image" src="{{ vich_uploader_asset(dish, 'imageFile') }}" alt={{dish.name}}>
-    <div class="bruschetta__description">
-        <p class="bruschetta__description--title">{{dish.name}}</p>
-        <p class="bruschetta__description--details">{{dish.description}}</p>
+<section class="dish-show">
+    <h1 class='dish-show__title'>{{dish.name}}</h1>
+    <div class='dish-show__flux'>
+        <div class='flex-center dish-show__field'>
+            <p class='dish-show__field--name'>Image: </p>
+            <img class="dish-show__field--image" src="{{ vich_uploader_asset(dish, 'imageFile') }}" alt={{dish.name}}>
+        </div>
+        <div class='flex-center dish-show__field'>
+            <p class='dish-show__field--name'>Nom du plat: </p>
+            <p class="dish-show__field--info">{{dish.name}}</p>
+        </div>
+        <div class='flex-center dish-show__field'>
+            <p class='dish-show__field--name'>Description du plat: </p>
+            <p class="dish-show__field--info">{{dish.description}}</p>
+        </div>
+        <div class='flex-center dish-show__field'>
+            <p class='dish-show__field--name'>Prix du plat: </p>
+            <p class="dish-show__field--info">{{dish.price}}</p>
+        </div>
+        <div class='flex-center dish-show__modification'>
+            <a href="{{ path('app_dishes_index') }}" class='btn dish-show__modification--button'>Retour à la liste des plats</a>
+            <a href="{{ path('app_dishes_edit', {'id': dish.id}) }}" class='btn dish-show__modification--button'>Modifier</a>
+        </div>
     </div>
-    <p class="bruschetta__price">{{dish.price}}</p>
-    <a href="{{ path('app_dishes_index') }}">Retour à la liste des plats</a>
-    <a href="{{ path('app_dishes_edit', {'id': dish.id}) }}">Modifier</a>
     {{ include('dishes/_delete_form.html.twig') }}
+</section>
 
 {% endblock %}

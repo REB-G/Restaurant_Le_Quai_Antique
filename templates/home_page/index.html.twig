@@ -42,7 +42,7 @@
     {% if is_granted('ROLE_ADMIN') %}
         <a href="{{ path('app_famous_dishes_new') }}" class='famous-dish-card__modification--add'>Ajouter un plat</a>
     {% endif %}
-    <a class="btn-reservation">Réserver une table</a>
+    <a href="{{ path('app_reservation') }}" class="btn-reservation">Réserver une table</a>
 </section>
 
 {% endblock %}
