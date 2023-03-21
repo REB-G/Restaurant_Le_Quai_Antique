@@ -1403,6 +1403,7 @@ body {
 }
 .footer__opening {
   margin-right: 5vw;
+  margin-top: 2vw;
 }
 .footer__opening--title {
   text-decoration: underline;
@@ -1413,6 +1414,7 @@ body {
 }
 .footer__contact {
   margin-right: 5vw;
+  margin-top: 2vw;
 }
 .footer__contact--title {
   text-decoration: underline;
@@ -1423,6 +1425,7 @@ body {
 }
 .footer__legals {
   margin-right: 5vw;
+  margin-top: 2vw;
 }
 .footer__legals--title {
   text-decoration: underline;
@@ -1432,7 +1435,13 @@ body {
   color: #8D3B09;
 }
 .footer__copyright {
-  margin-top: 2vw;
+  margin-top: 5vw;
+  margin-bottom: 2vw;
+}
+@media screen and (min-width: 935px) {
+  .footer__copyright {
+    margin-top: 2vw;
+  }
 }
 
 .btn {
