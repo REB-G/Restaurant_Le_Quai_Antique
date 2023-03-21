@@ -43,7 +43,7 @@ ul {
   font-size: 1.7rem;
 }
 
-.btn-reservation, .header__link, .all-menus__dish, .all-menus__modification--modifier, .all-menus__modification--delete, .all-menus__new--add, .lunch-menu__information, .main-modification__modifier, .famous-dish-card__modification--modifier, .famous-dish-card__modification--delete, .famous-dish-card__modification--add, .dish-show__field--name, .dish-show__field--info, .dish-show__modification--button, .dishes-form__field--label, .dishes-form__field--input, .dishes-form__modification--button, .menu-show__field--name, .menu-show__field--info, .menu-show__modification--button, .menus-form__field--label, .menus-form__field--input, .menus-form__modification--button, .famous-dish-show__field--name, .famous-dish-show__field--info, .famous-dish-show__modification--button, .famous-dishes-form__field--label, .famous-dishes-form__field--input, .famous-dishes-form__field--input-file, .famous-dishes-form__modification--button, .home-page-form__field--label, .home-page-form__field--input, .home-page-form__modification--button, .register-form__field--label, .register-form__field--input, .register-form__field-checkbox--label, .register-form__field-checkbox--input, .register-form__button, .login-form__email--label, .login-form__email--input, .login-form__password--label, .login-form__password--input, .login-form__button, .resa-form__field--label, .resa-form__field--input, .resa-form__reservation--button, .vegetarians-dishes__modification--add, .vegetarians-list__description--details, .vegetarians-list__price, .vegetarians-list__modification--modifier, .vegetarians-list__modification--delete, .starters-dishes__modification--add, .starters-list__description--details, .starters-list__price, .starters-list__modification--modifier, .starters-list__modification--delete, .main-courses-dishes__modification--add, .main-courses-list__description--details, .main-courses-list__price, .main-courses-list__modification--modifier, .main-courses-list__modification--delete, .desserts-dishes__modification--add, .desserts-list__description--details, .desserts-list__price, .desserts-list__modification--modifier, .desserts-list__modification--delete, .burgers-dishes__modification--add, .burgers-list__description--details, .burgers-list__price, .burgers-list__modification--modifier, .burgers-list__modification--delete {
+.btn-reservation, .header__link, .all-menus__dish, .all-menus__modification--modifier, .all-menus__modification--delete, .all-menus__new--add, .lunch-menu__information, .main-modification__modifier, .famous-dish-card__modification--modifier, .famous-dish-card__modification--delete, .famous-dish-card__modification--add, .dish-show__field--name, .dish-show__field--info, .dish-show__modification--button, .dishes-form__field--label, .dishes-form__field--input, .dishes-form__modification--button, .menu-show__field--name, .menu-show__field--info, .menu-show__modification--button, .menus-form__field--label, .menus-form__field--input, .menus-form__modification--button, .famous-dish-show__field--name, .famous-dish-show__field--info, .famous-dish-show__modification--button, .famous-dishes-form__field--label, .famous-dishes-form__field--input, .famous-dishes-form__field--input-file, .famous-dishes-form__modification--button, .home-page-form__field--label, .home-page-form__field--input, .home-page-form__modification--button, .register-form__field--label, .register-form__field--input, .register-form__field-checkbox--label, .register-form__field-checkbox--input, .register-form__button--register, .login-form__email--label, .login-form__email--input, .login-form__password--label, .login-form__password--input, .login-form__button, .resa-form__field--label, .resa-form__field--input, .resa-form__reservation--button, .vegetarians-dishes__modification--add, .vegetarians-list__description--details, .vegetarians-list__price, .vegetarians-list__modification--modifier, .vegetarians-list__modification--delete, .starters-dishes__modification--add, .starters-list__description--details, .starters-list__price, .starters-list__modification--modifier, .starters-list__modification--delete, .main-courses-dishes__modification--add, .main-courses-list__description--details, .main-courses-list__price, .main-courses-list__modification--modifier, .main-courses-list__modification--delete, .desserts-dishes__modification--add, .desserts-list__description--details, .desserts-list__price, .desserts-list__modification--modifier, .desserts-list__modification--delete, .burgers-dishes__modification--add, .burgers-list__description--details, .burgers-list__price, .burgers-list__modification--modifier, .burgers-list__modification--delete {
   font-family: "franckruehl", serif;
   font-size: 1.3rem;
 }
@@ -659,18 +659,22 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-top: 3vw;
 }
 .register-form__field-checkbox--input {
   margin-left: 5vw;
 }
 .register-form__button {
+  margin-top: 5vw;
+}
+.register-form__button--register {
   background-color: #8D3B09;
   color: #D6BE74;
   text-align: center;
   margin-top: 5vw;
   cursor: pointer;
 }
-.register-form__button:hover {
+.register-form__button--register:hover {
   background-color: #D6BE74;
   color: #000000;
 }

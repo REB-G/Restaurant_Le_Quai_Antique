@@ -43,6 +43,7 @@
         flex-direction: row
         align-items: center
         justify-content: space-between
+        margin-top: 3vw
 
         &--label
             @extend %paragraphe-s
@@ -52,15 +53,18 @@
             margin-left: 5vw
 
     &__button
-        background-color: utils.$brown
-        color: utils.$gold
-        @extend %paragraphe-s
-        text-align: center
         margin-top: 5vw
-        cursor: pointer
-        &:hover
-            background-color: utils.$gold
-            color: utils.$black
+
+        &--register
+            background-color: utils.$brown
+            color: utils.$gold
+            @extend %paragraphe-s
+            text-align: center
+            margin-top: 5vw
+            cursor: pointer
+            &:hover
+                background-color: utils.$gold
+                color: utils.$black
 
 #registration_form_allergy
     display: flex
