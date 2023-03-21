@@ -1,0 +1,29 @@
+@use "../../../sass/utils/_main" as utils
+
+.error403
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    margin-top: 10vw
+    margin-bottom: 20vw
+
+    &__title
+        @extend %title-1
+
+    &__info
+        @extend %paragraphe-l
+        margin-top: 5vw
+        text-align: center
+
+    &__link
+        margin-top: 5vw
+        @extend %paragraphe-m
+        text-align: center
+        color: utils.$brown
+        text-decoration: underline
+        text-underline-offset: 0.5vw
+        text-decoration-color: utils.$gold
+        &:hover
+            color: utils.$gold
+            text-decoration-color: utils.$brown

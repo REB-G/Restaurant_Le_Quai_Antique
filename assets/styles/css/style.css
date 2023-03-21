@@ -13,7 +13,7 @@ ul {
   list-style: none;
 }
 
-.main-menus__title, .main__title, .dishes-form__title, .menus-form__title, .famous-dishes-form__title, .famous-dishes-index__title, .home-page-form__title, .register-form__title, .login-form__title, .resa-form__title, .main-dishes__title {
+.main-menus__title, .main__title, .error404__title, .error403__title, .dishes-form__title, .menus-form__title, .famous-dishes-form__title, .famous-dishes-index__title, .home-page-form__title, .register-form__title, .login-form__title, .resa-form__title, .main-dishes__title {
   font-family: "garamond", serif;
   font-size: 3rem;
 }
@@ -33,12 +33,12 @@ ul {
   font-size: 1.3rem;
 }
 
-.main-menus__description, .main__text-presentation, .reservation-success__info, .reservation-error__info, .main-dishes__description {
+.main-menus__description, .main__text-presentation, .error404__info, .error403__info, .reservation-success__info, .reservation-error__info, .main-dishes__description {
   font-family: "franckruehl", serif;
   font-size: 2rem;
 }
 
-.all-menus__description--text, .all-menus__description--price, .description__text-presentation, .famous-dishes__text-presentation, .famous-dish-card__description--text-presentation, .reservation-success__redirection--link, .reservation-error__redirection--link {
+.all-menus__description--text, .all-menus__description--price, .description__text-presentation, .famous-dishes__text-presentation, .famous-dish-card__description--text-presentation, .error404__link, .error403__link, .reservation-success__redirection--link, .reservation-error__redirection--link {
   font-family: "franckruehl", serif;
   font-size: 1.7rem;
 }
@@ -1005,6 +1005,56 @@ body {
 .dish-show__modification--button:hover {
   background-color: #D6BE74;
   color: #000000;
+}
+
+.error403 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10vw;
+  margin-bottom: 20vw;
+}
+.error403__info {
+  margin-top: 5vw;
+  text-align: center;
+}
+.error403__link {
+  margin-top: 5vw;
+  text-align: center;
+  color: #8D3B09;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+  text-decoration-color: #D6BE74;
+}
+.error403__link:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
+}
+
+.error404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10vw;
+  margin-bottom: 20vw;
+}
+.error404__info {
+  margin-top: 5vw;
+  text-align: center;
+}
+.error404__link {
+  margin-top: 5vw;
+  text-align: center;
+  color: #8D3B09;
+  text-decoration: underline;
+  text-underline-offset: 0.5vw;
+  text-decoration-color: #D6BE74;
+}
+.error404__link:hover {
+  color: #D6BE74;
+  text-decoration-color: #8D3B09;
 }
 
 .famous-dish-card {
