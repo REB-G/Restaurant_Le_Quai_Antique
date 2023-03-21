@@ -68,13 +68,13 @@ class HomePageController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_home_page_delete', methods: ['POST'])]
-    public function delete(Request $request, HomePage $homePage, HomePageRepository $homePageRepository): Response
-    {
-        if ($this->isCsrfTokenValid('delete'.$homePage->getId(), $request->request->get('_token'))) {
-            $homePageRepository->remove($homePage, true);
-        }
+    // #[Route('/{id}', name: 'app_home_page_delete', methods: ['POST'])]
+    // public function delete(Request $request, HomePage $homePage, HomePageRepository $homePageRepository): Response
+    // {
+    //     if ($this->isCsrfTokenValid('delete'.$homePage->getId(), $request->request->get('_token'))) {
+    //         $homePageRepository->remove($homePage, true);
+    //     }
 
-        return $this->redirectToRoute('app_home_page_index', [], Response::HTTP_SEE_OTHER);
-    }
+    //     return $this->redirectToRoute('app_home_page_index', [], Response::HTTP_SEE_OTHER);
+    // }
 }

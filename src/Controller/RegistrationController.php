@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Users;
+use App\Entity\HomePage;
 use App\Form\RegistrationFormType;
 use App\Security\UsersAuthenticator;
 use Doctrine\ORM\EntityManagerInterface;
@@ -38,7 +39,7 @@ class RegistrationController extends AbstractController
             $entityManager->flush();
             // do anything else you need here, like send an email
 
-            //return $this->redirectToRoute('app_home');
+            //return $this->redirectToRoute('app_home_page_index');
             return $userAuthenticator->authenticateUser(
                 $user,
                 $authenticator,

@@ -1,6 +1,6 @@
-{# <form method="post" action="{{ path('app_home_page_delete', {'id': home_page.id}) }}" onsubmit="return confirm('Êtes-vous sûre de vouloir supprimer cette page ?');">
+<form method="post" action="{{ path('app_home_page_delete', {'id': home_page.id}) }}" onsubmit="return confirm('Êtes-vous sûre de vouloir supprimer cette page ?');">
     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ home_page.id) }}">
     <div class='flex-center home-page-form__modification'>
         <button class="btn home-page-form__modification--button">Supprimer</button>
     </div>
-</form> #}
+</form>
