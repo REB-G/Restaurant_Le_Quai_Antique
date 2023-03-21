@@ -13,7 +13,7 @@ const watchSubmit = () => {
 // - les envoyer à mon back
 const backCall = (dataToSend) => {
     console.log('dataToSend', dataToSend)
-    fetch('https://127.0.0.1:8000/api', {
+    fetch('https://lequaiantique.studio/api', {
         method: "POST",
         body: dataToSend})
     .then((response) => response.json())
