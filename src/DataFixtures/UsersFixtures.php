@@ -24,8 +24,8 @@ class UsersFixtures extends Fixture implements DependentFixtureInterface
         $admin = new Users();
         $admin->setName('Nuttle')
             ->setFirstname('Ursule')
-            ->setEmail('rest.quai.antique@gmail.com')
-            ->setPassword($this->passwordHasher->hashPassword($admin, 'RestQuai.1'))
+            ->setEmail('quai.antique@gmail.com')
+            ->setPassword($this->passwordHasher->hashPassword($admin, 'Password.1'))
             ->setRoles(['ROLE_ADMIN'])
             ->setDefaultNumberOfGuests(1);
 
