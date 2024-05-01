@@ -1,5 +1,6 @@
 @use "../utils/_fonts" as font
 @use "../utils/_colors" as colors
+@use "../utils/_mixins" as utils
 
 %title-1
     font-family: font.$font-title    
@@ -32,3 +33,38 @@
 %paragraphe-xs
     font-family: font.$font-text
     font-size: 0.75rem
+
+@mixin title-page-typo()
+    font-size: 1.7rem
+    +utils.responsive('tablet')
+        font-size: 2.2rem
+    +utils.responsive('laptop')
+        font-size: 2.5rem
+
+@mixin text-page-typo()
+    font-size: 1.15rem
+    +utils.responsive('tablet')
+        font-size: 1.3rem
+    +utils.responsive('laptop')
+        font-size: 1.5rem
+
+@mixin title-typo()
+    font-size: 1.4rem
+    +utils.responsive('tablet')
+        font-size: 1.9rem
+    +utils.responsive('laptop')
+        font-size: 2.2rem
+
+@mixin text-typo()
+    font-size: 1.15rem
+    +utils.responsive('tablet')
+        font-size: 1.3rem
+    +utils.responsive('laptop')
+        font-size: 1.6rem
+
+@mixin litle-text-typo()
+    font-size: 1rem
+    +utils.responsive('tablet')
+        font-size: 1.15rem
+    +utils.responsive('laptop')
+        font-size: 1.3rem

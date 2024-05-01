@@ -22,7 +22,9 @@
 
 
 .header__container--logo 
-    width: 20vw
+    width: 40vw
+    +utils.responsive(tablet)
+        width: 20vw
 
 .header 
     &__container--nav 
@@ -66,7 +68,9 @@
     & i 
         display: block
         color: utils.$yellow-metal
-        font-size: 1.5rem
+        font-size: 2rem
+        +utils.responsive(tablet)
+            font-size: 1.5rem
 
 .btn
     border-radius: 1.5rem

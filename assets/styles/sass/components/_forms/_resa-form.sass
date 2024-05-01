@@ -5,7 +5,7 @@
 
 .resa-form
     &__title
-        @extend %title-1
+        +utils.title-page-typo()
         text-align: center
         margin-top: 5vw
 
@@ -34,10 +34,10 @@
             align-items: baseline
 
         &--label
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
 
         &--input
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
             +utils.responsive("tablet")
                 margin-left: 5vw
 
@@ -47,7 +47,7 @@
         &--button
             background-color: utils.$brown
             color: utils.$gold
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
             text-align: center
             cursor: pointer
             &:hover
@@ -73,7 +73,7 @@
     justify-content: center
 
     &__info
-        @extend %paragraphe-l
+        +utils.text-page-typo()
         text-align: center
         margin-top: 10vw
 
@@ -85,7 +85,7 @@
         margin-top: 5vw
 
         &--link
-            @extend %paragraphe-m
+            +utils.text-typo()
             margin-top: 5vw
             text-decoration: underline
             text-underline-offset: 0.2rem
@@ -106,7 +106,7 @@
     justify-content: center
 
     &__info
-        @extend %paragraphe-l
+        +utils.text-page-typo()
         text-align: center
         margin: 10vw
 
@@ -118,7 +118,7 @@
         margin-top: 5vw
 
         &--link
-            @extend %paragraphe-m
+            +utils.text-typo()
             margin-top: 5vw
             text-decoration: underline
             text-underline-offset: 0.2rem

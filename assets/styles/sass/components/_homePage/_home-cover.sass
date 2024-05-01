@@ -5,11 +5,11 @@
     padding: 5vw
 
     &__title
-        @extend %title-1
+        +utils.title-page-typo()
         color: utils.$gold
 
     &__text-presentation
-        @extend %paragraphe-l
+        +utils.text-page-typo()
         color: utils.$yellow-metal
         margin-top: 3.5vw
 
@@ -20,11 +20,11 @@
     padding: 0 7vw 7vw 7vw
 
     &__title
-        @extend %title-2
+        +utils.title-typo()
         color: utils.$gold
 
     &__text-presentation
-        @extend %paragraphe-m
+        +utils.text-typo()
         color: utils.$yellow-metal
         margin-top: 3.5vw
 
@@ -36,12 +36,12 @@
     justify-content: space-between
 
     &__title
-        @extend %title-2
+        +utils.title-typo()
         color: utils.$gold
         margin-top: 3.5vw
 
     &__text-presentation
-        @extend %paragraphe-m
+        +utils.text-typo()
         text-align: center
         color: utils.$yellow-metal
         margin-top: 3.5vw
@@ -51,7 +51,8 @@
 
     &__modifier
         margin-top: 1.5vw
-        @extend %paragraphe-s
+        // +utils.litle-text-typo()
+        +utils.text-typo()
         text-align: center
         margin-right: 0.5vw 
         color: utils.$brown

@@ -2,7 +2,7 @@
 
 .famous-dishes-form
     &__title
-        @extend %title-1
+        +utils.title-page-typo()
         text-align: center
         margin-top: 5vw
 
@@ -28,13 +28,13 @@
         margin-bottom:5vw
 
         &--label
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
 
         &--input
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
 
         &--input-file
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
             cursor: pointer
 
     &__modification
@@ -43,7 +43,7 @@
         &--button
             background-color: utils.$brown
             color: utils.$gold
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
             text-align: center
             cursor: pointer
             &:hover
@@ -51,6 +51,6 @@
                 color: utils.$black
 
 .famous-dishes-index__title
-    @extend %title-1
+    +utils.title-page-typo()
     text-align: center
     margin: 5vw

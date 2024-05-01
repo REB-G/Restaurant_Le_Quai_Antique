@@ -6,19 +6,19 @@
     align-items: center
     justify-content: center
     margin-top: 10vw
-    margin-bottom: 20vw
+    margin-bottom: 20vws
 
     &__title
-        @extend %title-1
+        +utils.title-page-typo()
 
     &__info
-        @extend %paragraphe-l
+        +utils.text-page-typo()
         margin-top: 5vw
         text-align: center
 
     &__link
         margin-top: 5vw
-        @extend %paragraphe-m
+        +utils.text-typo()
         text-align: center
         color: utils.$brown
         text-decoration: underline

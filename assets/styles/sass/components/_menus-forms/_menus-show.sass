@@ -14,7 +14,7 @@
         justify-content: space-around
 
     &__title
-        @extend %title-2
+        +utils.title-typo()
         text-align: center
         margin: 5vw
 
@@ -26,14 +26,14 @@
         margin-bottom:5vw
 
         &--name
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
             color: utils.$brown
 
         &--image
             max-width: 25vw
 
         &--info
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
 
     &__modification
         display: flex
@@ -44,7 +44,7 @@
         &--button
             background-color: utils.$brown
             color: utils.$gold
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
             text-align: center
             cursor: pointer
             margin-top: 5vw

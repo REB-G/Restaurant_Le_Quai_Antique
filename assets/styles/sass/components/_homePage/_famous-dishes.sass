@@ -12,7 +12,11 @@
         flex-direction: row
 
     &__view
-        width: 50%
+        width: 100%
+        +utils.responsive(litle-tablet)
+            width: 70%
+        +utils.responsive(laptop)
+            width: 50%
 
         &--image
             width: 100%
@@ -20,16 +24,20 @@
             object-fit: cover
 
     &__description
-        width: 50%
         padding: 5vw
         text-align: center
+        width: 100%
+        +utils.responsive(litle-tablet)
+            width: 70%
+        +utils.responsive(laptop)
+            width: 50%
 
         &--title
-            @extend %title-2
+            +utils.title-typo()
             color: utils.$brown
 
         &--text-presentation
-            @extend %paragraphe-m
+            +utils.text-typo()
             color: utils.$gold
 
     &__modification
@@ -40,7 +48,8 @@
 
         &--modifier
             margin-top: 1.5vw
-            @extend %paragraphe-s
+            +utils.text-typo()
+            // +utils.litle-text-typo()
             text-align: center
             margin-right: 0.5vw 
             color: utils.$brown
@@ -53,7 +62,8 @@
 
         &--delete
             margin-top: 1.5vw
-            @extend %paragraphe-s
+            +utils.text-typo()
+            // +utils.litle-text-typo()
             text-align: center
             margin-left: 0.5vw
             color: utils.$brown
@@ -66,7 +76,8 @@
 
         &--add
             margin-top: 1.5vw
-            @extend %paragraphe-s
+            // +utils.litle-text-typo()
+            +utils.text-typo()
             text-align: center
             margin-left: 0.5vw
             color: utils.$brown

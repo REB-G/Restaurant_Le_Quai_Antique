@@ -9,7 +9,7 @@
     margin-top: 3vw
 
     &__title
-        @extend %title-1
+        +utils.title-page-typo()
         text-align: center
         margin-top: 3vw
 
@@ -26,10 +26,10 @@
             align-content: stretch
 
         &--label
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
 
         &--input
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
 
     &__password
         align-items: baseline
@@ -44,15 +44,15 @@
             align-content: stretch
 
         &--label
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
 
         &--input
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
 
     &__button
         background-color: utils.$brown
         color: utils.$gold
-        @extend %paragraphe-s
+        +utils.litle-text-typo()
         text-align: center
         cursor: pointer
         &:hover

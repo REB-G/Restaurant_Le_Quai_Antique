@@ -5,7 +5,7 @@
     margin-top: 17vw
 
     &__title
-        @extend %title-2
+        +utils.title-typo()
         text-decoration: underline
         text-underline-offset: 0.5vw
 
@@ -17,7 +17,7 @@
 
         &--add
             margin-top: 1.5vw
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
             text-align: center
             color: utils.$brown
             text-decoration: underline
@@ -35,19 +35,24 @@
     justify-content: center
 
     &__image
-        width: 30vw
+        width: 100%
+        max-width: 90%
+        +utils.responsive(litle-tablet)
+            width: 70%
+        +utils.responsive(tablet)
+            width: 30%
 
     &__description
         padding: 3vw
 
         &--title
-            @extend %title-3
+            +utils.title-typo()
 
         &--details
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
 
     &__price
-        @extend %paragraphe-s
+        +utils.litle-text-typo()
         color: utils.$brown
 
     &__modification
@@ -55,7 +60,7 @@
         
         &--modifier
             margin-top: 1.5vw
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
             text-align: center
             margin-right: 0.5vw 
             color: utils.$brown
@@ -68,7 +73,7 @@
 
         &--delete
             margin-top: 1.5vw
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
             text-align: center
             margin-left: 0.5vw
             color: utils.$brown

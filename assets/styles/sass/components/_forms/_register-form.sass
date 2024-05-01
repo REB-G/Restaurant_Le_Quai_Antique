@@ -2,7 +2,7 @@
 
 .register-form
     &__title
-        @extend %title-1
+        +utils.title-page-typo()
         text-align: center
         margin-top: 5vw
 
@@ -31,10 +31,10 @@
             align-items: baseline
 
         &--label
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
 
         &--input
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
             +utils.responsive("tablet")
                 margin-left: 5vw
 
@@ -46,10 +46,10 @@
         margin-top: 3vw
 
         &--label
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
 
         &--input
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
             margin-left: 5vw
 
     &__button
@@ -58,7 +58,7 @@
         &--register
             background-color: utils.$brown
             color: utils.$gold
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
             text-align: center
             margin-top: 5vw
             cursor: pointer

@@ -5,12 +5,12 @@
     margin-top: 3vw
 
     &__title
-        @extend %title-1
+        +utils.title-page-typo()
         text-align: center
         margin-bottom: 5vw
 
     &__description
-        @extend %paragraphe-l
+        +utils.text-page-typo()
         text-align: center
 
         &--link
@@ -28,35 +28,35 @@
 
         &--title
             margin-top: 4vw
-            @extend %title-2
+            +utils.title-typo()
             text-align: center
             text-decoration: underline
             text-underline-offset: 0.5vw
 
         &--text
             margin-top: 2.5vw
-            @extend %paragraphe-m
+            +utils.text-typo()
             text-align: center
 
         &--price
             text-align: center
             margin-top: 1.5vw
             color: utils.$brown
-            @extend %paragraphe-m
+            +utils.text-typo()
             
     &__category
-        @extend %title-3
+        +utils.title-typo()
         margin-top: 3.5vw
 
     &__dish
-        @extend %paragraphe-s
+        +utils.litle-text-typo()
 
     &__modification
         margin-top: 5vw
 
         &--modifier
             margin-top: 1.5vw
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
             text-align: center
             margin-right: 0.5vw 
             color: utils.$brown
@@ -69,7 +69,7 @@
 
         &--delete
             margin-top: 1.5vw
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
             text-align: center
             margin-left: 0.5vw
             color: utils.$brown
@@ -85,7 +85,7 @@
         
         &--add
             margin-top: 1.5vw
-            @extend %paragraphe-s
+            +utils.litle-text-typo()
             text-align: center
             color: utils.$brown
             text-decoration: underline
@@ -96,4 +96,4 @@
                 text-decoration-color: utils.$brown
 
 .lunch-menu__information
-    @extend %paragraphe-s
+    +utils.litle-text-typo()
